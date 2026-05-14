@@ -309,7 +309,7 @@ svg text{font-family:var(--font-num)}
     <div class="brand-mark">HR</div>
     <div>
       <h1>Recruitment Dashboard</h1>
-      <p id="brandSub">TVP GROUP · FY 2569 · สรุปผลการสรรหาบุคลากร</p>
+      <p id="brandSub">TVP GROUP · FY <span data-yk="year">2569</span> · สรุปผลการสรรหาบุคลากร</p>
     </div>
   </div>
   <div class="top-meta">
@@ -320,8 +320,8 @@ svg text{font-family:var(--font-num)}
         <option value="2567">ปีงบประมาณ 2567</option>
       </select>
     </div>
-    <div class="chip"><span class="lbl">UPDATED</span><span class="val" id="lastUpdate">29 เม.ย. 2569</span></div>
-    <div class="chip"><span class="lbl">TOTAL</span><span class="val" id="totalChip">236</span></div>
+    <div class="chip"><span class="lbl">UPDATED</span><span class="val" id="lastUpdate" data-yk="asOf">29 เม.ย. 2569</span></div>
+    <div class="chip"><span class="lbl">TOTAL</span><span class="val" id="totalChip" data-yk="total">236</span></div>
     <button class="btn primary" id="updateBtn">⟳ Update</button>
     <button class="btn" id="configBtn" title="ตั้งค่า URL Google Sheets">⚙</button>
     <button class="btn" onclick="window.print()">⎙ Print</button>
@@ -342,58 +342,58 @@ svg text{font-family:var(--font-num)}
   <button class="tab" data-tab="bu">Business Unit <span class="tab-count">6</span></button>
   <button class="tab" data-tab="recruiter">Recruiter <span class="tab-count">5</span></button>
   <button class="tab" data-tab="source">แหล่งที่มา <span class="tab-count">7</span></button>
-  <button class="tab" data-tab="pending">ค้างรับ <span class="tab-count">26</span></button>
+  <button class="tab" data-tab="pending">ค้างรับ <span class="tab-count" data-yk="pending">26</span></button>
 </div>
 
 <div class="section active" data-section="overview">
   <div class="kpi-row">
-    <div class="kpi blue clickable fade-in d1" data-detail="kpi-total"><div class="kpi-head"><div class="kpi-label">อัตราที่ร้องขอ</div><div class="kpi-tag">TOTAL</div></div><div class="kpi-value mono" data-count="236">236</div><div class="kpi-sub">ปี 2568–2569</div></div>
-    <div class="kpi green clickable fade-in d2" data-detail="kpi-hired"><div class="kpi-head"><div class="kpi-label">รับเข้าทำงานแล้ว</div><div class="kpi-tag">HIRED</div></div><div class="kpi-value mono" data-count="41">41</div><div class="kpi-sub"><strong>55%</strong> ของที่ดำเนินการ</div></div>
-    <div class="kpi orange clickable fade-in d3" data-detail="kpi-wip"><div class="kpi-head"><div class="kpi-label">กำลังดำเนินการ</div><div class="kpi-tag">WIP</div></div><div class="kpi-value mono" data-count="28">28</div><div class="kpi-sub">อยู่ระหว่างสรรหา / เจรจา</div></div>
-    <div class="kpi red clickable fade-in d4" data-detail="kpi-pending"><div class="kpi-head"><div class="kpi-label">ค้างรับ</div><div class="kpi-tag">PENDING</div></div><div class="kpi-value mono" data-count="26">26</div><div class="kpi-sub">รอการบรรจุ</div></div>
-    <div class="kpi purple clickable fade-in d5" data-detail="kpi-days"><div class="kpi-head"><div class="kpi-label">Avg. Days to Hire</div><div class="kpi-tag">DAYS</div></div><div class="kpi-value mono" data-count="28">28</div><div class="kpi-sub">เฉพาะรายที่สรรหาสำเร็จ</div></div>
+    <div class="kpi blue clickable fade-in d1" data-detail="kpi-total"><div class="kpi-head"><div class="kpi-label">อัตราที่ร้องขอ</div><div class="kpi-tag">TOTAL</div></div><div class="kpi-value mono" data-yk="total">236</div><div class="kpi-sub">ปี 2568–2569</div></div>
+    <div class="kpi green clickable fade-in d2" data-detail="kpi-hired"><div class="kpi-head"><div class="kpi-label">รับเข้าทำงานแล้ว</div><div class="kpi-tag">HIRED</div></div><div class="kpi-value mono" data-yk="hired">41</div><div class="kpi-sub"><strong data-yk="hiredPct">55%</strong> ของที่ดำเนินการ</div></div>
+    <div class="kpi orange clickable fade-in d3" data-detail="kpi-wip"><div class="kpi-head"><div class="kpi-label">กำลังดำเนินการ</div><div class="kpi-tag">WIP</div></div><div class="kpi-value mono" data-yk="wip">28</div><div class="kpi-sub">อยู่ระหว่างสรรหา / เจรจา</div></div>
+    <div class="kpi red clickable fade-in d4" data-detail="kpi-pending"><div class="kpi-head"><div class="kpi-label">ค้างรับ</div><div class="kpi-tag">PENDING</div></div><div class="kpi-value mono" data-yk="pending">26</div><div class="kpi-sub">รอการบรรจุ</div></div>
+    <div class="kpi purple clickable fade-in d5" data-detail="kpi-days"><div class="kpi-head"><div class="kpi-label">Avg. Days to Hire</div><div class="kpi-tag">DAYS</div></div><div class="kpi-value mono" data-yk="days">28</div><div class="kpi-sub">เฉพาะรายที่สรรหาสำเร็จ</div></div>
   </div>
 
   <div class="grid3">
-    <div class="card fade-in d1"><div class="card-title"><span class="ttl">สถานะการสรรหา</span><span class="meta">80 ITEMS</span></div>
+    <div class="card fade-in d1"><div class="card-title"><span class="ttl">สถานะการสรรหา</span><span class="meta"><span data-yk="statusTotal">80</span> ITEMS</span></div>
       <div class="donut-wrap"><svg class="donut-svg" width="130" height="130" viewBox="0 0 130 130">
         <circle cx="65" cy="65" r="48" fill="none" stroke="var(--surface-2)" stroke-width="12"/>
-        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--green)" stroke-width="12" stroke-dasharray="154.4 147.1" stroke-dashoffset="0" transform="rotate(-90 65 65)" data-detail="status-hired"/>
-        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--accent)" stroke-width="12" stroke-dasharray="105.5 196" stroke-dashoffset="-154.4" transform="rotate(-90 65 65)" data-detail="status-wip"/>
-        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--yellow)" stroke-width="12" stroke-dasharray="98 203.5" stroke-dashoffset="-259.9" transform="rotate(-90 65 65)" data-detail="status-pending"/>
-        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--red)" stroke-width="12" stroke-dasharray="41.4 260.1" stroke-dashoffset="-357.9" transform="rotate(-90 65 65)" data-detail="status-cancel"/>
-        <text x="65" y="62" text-anchor="middle" fill="var(--ink)" font-size="22" font-weight="600">80</text>
+        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--green)" stroke-width="12" stroke-dasharray="154.4 147.1" stroke-dashoffset="0" transform="rotate(-90 65 65)" data-detail="status-hired" data-yk-arr="statusArrH"/>
+        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--accent)" stroke-width="12" stroke-dasharray="105.5 196" stroke-dashoffset="-154.4" transform="rotate(-90 65 65)" data-detail="status-wip" data-yk-arr="statusArrW" data-yk-off="statusOffW"/>
+        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--yellow)" stroke-width="12" stroke-dasharray="98 203.5" stroke-dashoffset="-259.9" transform="rotate(-90 65 65)" data-detail="status-pending" data-yk-arr="statusArrP" data-yk-off="statusOffP"/>
+        <circle class="seg" cx="65" cy="65" r="48" fill="none" stroke="var(--red)" stroke-width="12" stroke-dasharray="41.4 260.1" stroke-dashoffset="-357.9" transform="rotate(-90 65 65)" data-detail="status-cancel" data-yk-arr="statusArrC" data-yk-off="statusOffC"/>
+        <text x="65" y="62" text-anchor="middle" fill="var(--ink)" font-size="22" font-weight="600" data-yk="statusTotal">80</text>
         <text x="65" y="79" text-anchor="middle" fill="var(--muted)" font-size="9.5">รายการ</text></svg>
         <div class="donut-legend">
-          <div class="legend-item" data-detail="status-hired"><span class="dot" style="background:var(--green)"></span>รับเข้าทำงาน<span class="legend-val">41</span></div>
-          <div class="legend-item" data-detail="status-wip"><span class="dot" style="background:var(--accent)"></span>กำลังดำเนินการ<span class="legend-val">28</span></div>
-          <div class="legend-item" data-detail="status-pending"><span class="dot" style="background:var(--yellow)"></span>ค้างรับ<span class="legend-val">26</span></div>
-          <div class="legend-item" data-detail="status-cancel"><span class="dot" style="background:var(--red)"></span>ชะลอ/ยกเลิก<span class="legend-val">11</span></div>
+          <div class="legend-item" data-detail="status-hired"><span class="dot" style="background:var(--green)"></span>รับเข้าทำงาน<span class="legend-val" data-yk="hired">41</span></div>
+          <div class="legend-item" data-detail="status-wip"><span class="dot" style="background:var(--accent)"></span>กำลังดำเนินการ<span class="legend-val" data-yk="wip">28</span></div>
+          <div class="legend-item" data-detail="status-pending"><span class="dot" style="background:var(--yellow)"></span>ค้างรับ<span class="legend-val" data-yk="pending">26</span></div>
+          <div class="legend-item" data-detail="status-cancel"><span class="dot" style="background:var(--red)"></span>ชะลอ/ยกเลิก<span class="legend-val" data-yk="cancel">11</span></div>
         </div>
       </div>
     </div>
 
     <div class="card fade-in d2"><div class="card-title"><span class="ttl">อัตราร้องขอรายเดือน</span><span class="meta">Q1–APR</span></div>
       <div class="month-chart">
-        <div class="month-col" data-detail="month-jan"><div class="month-num">30</div><div class="month-bar" data-h="100" style="height:100%;background:var(--accent)"></div><div class="month-name">JAN</div></div>
-        <div class="month-col" data-detail="month-feb"><div class="month-num">17</div><div class="month-bar" data-h="57" style="height:57%;background:var(--green)"></div><div class="month-name">FEB</div></div>
-        <div class="month-col" data-detail="month-mar"><div class="month-num">16</div><div class="month-bar" data-h="53" style="height:53%;background:var(--orange)"></div><div class="month-name">MAR</div></div>
-        <div class="month-col" data-detail="month-apr"><div class="month-num">17</div><div class="month-bar" data-h="57" style="height:57%;background:var(--accent2)"></div><div class="month-name">APR</div></div>
+        <div class="month-col" data-detail="month-jan"><div class="month-num" data-yk="m1">30</div><div class="month-bar" data-yk-h="m1h" style="height:100%;background:var(--accent)"></div><div class="month-name" data-yk="m1n">JAN</div></div>
+        <div class="month-col" data-detail="month-feb"><div class="month-num" data-yk="m2">17</div><div class="month-bar" data-yk-h="m2h" style="height:57%;background:var(--green)"></div><div class="month-name" data-yk="m2n">FEB</div></div>
+        <div class="month-col" data-detail="month-mar"><div class="month-num" data-yk="m3">16</div><div class="month-bar" data-yk-h="m3h" style="height:53%;background:var(--orange)"></div><div class="month-name" data-yk="m3n">MAR</div></div>
+        <div class="month-col" data-detail="month-apr"><div class="month-num" data-yk="m4">17</div><div class="month-bar" data-yk-h="m4h" style="height:57%;background:var(--accent2)"></div><div class="month-name" data-yk="m4n">APR</div></div>
       </div>
-      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-family:var(--font-num)"><span>AVG <strong style="color:var(--ink)">20</strong>/MO</span><span>TOTAL <strong style="color:var(--accent)">80</strong></span></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-family:var(--font-num)"><span>AVG <strong style="color:var(--ink)" data-yk="monthAvg">20</strong>/MO</span><span>TOTAL <strong style="color:var(--accent)" data-yk="monthTotal">80</strong></span></div>
     </div>
 
-    <div class="card clickable fade-in d3" data-detail="sla"><div class="card-title"><span class="ttl">SLA Compliance</span><span class="meta">71 ITEMS</span></div>
+    <div class="card clickable fade-in d3" data-detail="sla"><div class="card-title"><span class="ttl">SLA Compliance</span><span class="meta"><span data-yk="slaTotal">71</span> ITEMS</span></div>
       <div style="text-align:center;margin-bottom:14px"><svg width="140" height="140" viewBox="0 0 140 140">
         <circle cx="70" cy="70" r="55" fill="none" stroke="var(--surface-2)" stroke-width="10"/>
-        <circle cx="70" cy="70" r="55" fill="none" stroke="var(--green)" stroke-width="10" stroke-dasharray="262.7 82.6" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-        <text x="70" y="68" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="600">76%</text>
+        <circle cx="70" cy="70" r="55" fill="none" stroke="var(--green)" stroke-width="10" stroke-dasharray="262.7 82.6" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 70 70)" data-yk-arr="slaArr"/>
+        <text x="70" y="68" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="600" data-yk="slaPct">76%</text>
         <text x="70" y="86" text-anchor="middle" fill="var(--muted)" font-size="10">ไม่เกิน SLA</text></svg>
       </div>
       <div style="display:flex;justify-content:space-around;text-align:center;gap:10px">
-        <div><div class="mono" style="font-size:22px;font-weight:600;color:var(--green)">54</div><div style="font-size:11px;color:var(--ink-3);margin-top:4px;text-transform:uppercase;letter-spacing:.4px">ภายในเวลา</div></div>
+        <div><div class="mono" style="font-size:22px;font-weight:600;color:var(--green)" data-yk="slaWithin">54</div><div style="font-size:11px;color:var(--ink-3);margin-top:4px;text-transform:uppercase;letter-spacing:.4px">ภายในเวลา</div></div>
         <div style="width:1px;background:var(--line)"></div>
-        <div><div class="mono" style="font-size:22px;font-weight:600;color:var(--red)">17</div><div style="font-size:11px;color:var(--ink-3);margin-top:4px;text-transform:uppercase;letter-spacing:.4px">เกินเวลา</div></div>
+        <div><div class="mono" style="font-size:22px;font-weight:600;color:var(--red)" data-yk="slaOver">17</div><div style="font-size:11px;color:var(--ink-3);margin-top:4px;text-transform:uppercase;letter-spacing:.4px">เกินเวลา</div></div>
       </div>
     </div>
   </div>
@@ -401,8 +401,8 @@ svg text{font-family:var(--font-num)}
   <div class="grid3">
     <div class="card fade-in d1"><div class="card-title"><span class="ttl">ประเภทการจ้างงาน</span><span class="meta">80 ITEMS</span></div>
       <div style="display:flex;gap:12px">
-        <div class="pill-card pc-blue" style="flex:1" data-detail="job-permanent"><div class="pc-val">68</div><div class="pc-label">Permanent</div></div>
-        <div class="pill-card pc-orange" style="flex:1" data-detail="job-temporary"><div class="pc-val">12</div><div class="pc-label">Temporary</div></div>
+        <div class="pill-card pc-blue" style="flex:1" data-detail="job-permanent"><div class="pc-val" data-yk="jobPerm">68</div><div class="pc-label">Permanent</div></div>
+        <div class="pill-card pc-orange" style="flex:1" data-detail="job-temporary"><div class="pc-val" data-yk="jobTemp">12</div><div class="pc-label">Temporary</div></div>
       </div>
       <div style="margin-top:16px;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;display:flex">
         <div style="height:100%;width:85%;background:var(--accent)"></div>
@@ -412,21 +412,21 @@ svg text{font-family:var(--font-num)}
 
     <div class="card fade-in d2"><div class="card-title"><span class="ttl">ประเภทการสรรหา</span><span class="meta">77 ITEMS</span></div>
       <div class="bar-group">
-        <div class="bar-item wide" data-detail="rep-resign"><div class="bar-label">ทดแทนลาออก</div><div class="bar-track"><div class="bar-fill" data-w="100" style="width:100%;background:var(--red)"></div></div><div class="bar-count">43</div></div>
-        <div class="bar-item wide" data-detail="rep-budget"><div class="bar-label">ตามแผนงบประมาณ</div><div class="bar-track"><div class="bar-fill" data-w="56" style="width:56%;background:var(--accent)"></div></div><div class="bar-count">24</div></div>
-        <div class="bar-item wide" data-detail="rep-restruct-extra"><div class="bar-label">โครงสร้างใหม่ (นอกแผน)</div><div class="bar-track"><div class="bar-fill" data-w="14" style="width:14%;background:var(--orange)"></div></div><div class="bar-count">6</div></div>
-        <div class="bar-item wide" data-detail="rep-restruct"><div class="bar-label">โครงสร้างใหม่</div><div class="bar-track"><div class="bar-fill" data-w="7" style="width:7%;background:var(--yellow)"></div></div><div class="bar-count">3</div></div>
-        <div class="bar-item wide" data-detail="rep-transfer"><div class="bar-label">ทดแทนโอนย้าย</div><div class="bar-track"><div class="bar-fill" data-w="2" style="width:2%;background:var(--muted)"></div></div><div class="bar-count">1</div></div>
+        <div class="bar-item wide" data-detail="rep-resign"><div class="bar-label">ทดแทนลาออก</div><div class="bar-track"><div class="bar-fill" data-yk-w="rep_resign_w" style="width:100%;background:var(--red)"></div></div><div class="bar-count" data-yk="rep_resign">43</div></div>
+        <div class="bar-item wide" data-detail="rep-budget"><div class="bar-label">ตามแผนงบประมาณ</div><div class="bar-track"><div class="bar-fill" data-yk-w="rep_budget_w" style="width:56%;background:var(--accent)"></div></div><div class="bar-count" data-yk="rep_budget">24</div></div>
+        <div class="bar-item wide" data-detail="rep-restruct-extra"><div class="bar-label">โครงสร้างใหม่ (นอกแผน)</div><div class="bar-track"><div class="bar-fill" data-yk-w="rep_restruct_extra_w" style="width:14%;background:var(--orange)"></div></div><div class="bar-count" data-yk="rep_restruct_extra">6</div></div>
+        <div class="bar-item wide" data-detail="rep-restruct"><div class="bar-label">โครงสร้างใหม่</div><div class="bar-track"><div class="bar-fill" data-yk-w="rep_restruct_w" style="width:7%;background:var(--yellow)"></div></div><div class="bar-count" data-yk="rep_restruct">3</div></div>
+        <div class="bar-item wide" data-detail="rep-transfer"><div class="bar-label">ทดแทนโอนย้าย</div><div class="bar-track"><div class="bar-fill" data-yk-w="rep_transfer_w" style="width:2%;background:var(--muted)"></div></div><div class="bar-count" data-yk="rep_transfer">1</div></div>
       </div>
     </div>
 
     <div class="card fade-in d3"><div class="card-title"><span class="ttl">หน่วยงานร้องขอมากสุด</span><span class="meta">TOP 5</span></div>
       <div class="bar-group">
-        <div class="bar-item wide" data-detail="dept-insur"><div class="bar-label" style="text-align:left">01 · ฝ่ายนายหน้าประกันภัย</div><div class="bar-track"><div class="bar-fill" data-w="100" style="width:100%;background:var(--accent)"></div></div><div class="bar-count">7</div></div>
-        <div class="bar-item wide" data-detail="dept-acct"><div class="bar-label" style="text-align:left">02 · ส่วนงานบัญชี</div><div class="bar-track"><div class="bar-fill" data-w="86" style="width:86%;background:var(--green)"></div></div><div class="bar-count">6</div></div>
-        <div class="bar-item wide" data-detail="dept-ezt1"><div class="bar-label" style="text-align:left">03 · อีซี่คาร์ (ทีม 1)</div><div class="bar-track"><div class="bar-fill" data-w="71" style="width:71%;background:var(--orange)"></div></div><div class="bar-count">5</div></div>
-        <div class="bar-item wide" data-detail="dept-short"><div class="bar-label" style="text-align:left">04 · บุคคลระยะสั้น สุขุมวิท</div><div class="bar-track"><div class="bar-fill" data-w="57" style="width:57%;background:var(--accent2)"></div></div><div class="bar-count">4</div></div>
-        <div class="bar-item wide" data-detail="dept-flexi"><div class="bar-label" style="text-align:left">05 · อีซี่คาร์ (Flexi)</div><div class="bar-track"><div class="bar-fill" data-w="57" style="width:57%;background:var(--cyan)"></div></div><div class="bar-count">4</div></div>
+        <div class="bar-item wide" data-detail="dept-insur"><div class="bar-label" data-yk="d1n" style="text-align:left">01 · ฝ่ายนายหน้าประกันภัย</div><div class="bar-track"><div class="bar-fill" data-yk-w="d1w" style="width:100%;background:var(--accent)"></div></div><div class="bar-count" data-yk="d1v">7</div></div>
+        <div class="bar-item wide" data-detail="dept-acct"><div class="bar-label" data-yk="d2n" style="text-align:left">02 · ส่วนงานบัญชี</div><div class="bar-track"><div class="bar-fill" data-yk-w="d2w" style="width:86%;background:var(--green)"></div></div><div class="bar-count" data-yk="d2v">6</div></div>
+        <div class="bar-item wide" data-detail="dept-ezt1"><div class="bar-label" data-yk="d3n" style="text-align:left">03 · อีซี่คาร์ (ทีม 1)</div><div class="bar-track"><div class="bar-fill" data-yk-w="d3w" style="width:71%;background:var(--orange)"></div></div><div class="bar-count" data-yk="d3v">5</div></div>
+        <div class="bar-item wide" data-detail="dept-short"><div class="bar-label" data-yk="d4n" style="text-align:left">04 · บุคคลระยะสั้น สุขุมวิท</div><div class="bar-track"><div class="bar-fill" data-yk-w="d4w" style="width:57%;background:var(--accent2)"></div></div><div class="bar-count" data-yk="d4v">4</div></div>
+        <div class="bar-item wide" data-detail="dept-flexi"><div class="bar-label" data-yk="d5n" style="text-align:left">05 · อีซี่คาร์ (Flexi)</div><div class="bar-track"><div class="bar-fill" data-yk-w="d5w" style="width:57%;background:var(--cyan)"></div></div><div class="bar-count" data-yk="d5v">4</div></div>
       </div>
     </div>
   </div>
@@ -434,31 +434,31 @@ svg text{font-family:var(--font-num)}
 
 <div class="section" data-section="bu">
   <div class="grid21">
-    <div class="card fade-in d1"><div class="card-title"><span class="ttl">จำนวนอัตราตาม Business Unit</span><span class="meta">6 BU · 80 ITEMS</span></div>
+    <div class="card fade-in d1"><div class="card-title"><span class="ttl">จำนวนอัตราตาม Business Unit</span><span class="meta">6 BU · <span data-yk="statusTotal">80</span> ITEMS</span></div>
       <div class="bar-group">
-        <div class="bar-item" data-detail="bu-tvp"><div class="bar-label">TVP</div><div class="bar-track"><div class="bar-fill" data-w="100" style="width:100%;background:var(--accent)"></div></div><div class="bar-count">50</div></div>
-        <div class="bar-item" data-detail="bu-trp"><div class="bar-label">TRP</div><div class="bar-track"><div class="bar-fill" data-w="28" style="width:28%;background:var(--accent2)"></div></div><div class="bar-count">14</div></div>
-        <div class="bar-item" data-detail="bu-ez"><div class="bar-label">TVP-Ez</div><div class="bar-track"><div class="bar-fill" data-w="22" style="width:22%;background:var(--green)"></div></div><div class="bar-count">11</div></div>
-        <div class="bar-item" data-detail="bu-uc"><div class="bar-label">TVP-Uc</div><div class="bar-track"><div class="bar-fill" data-w="6" style="width:6%;background:var(--orange)"></div></div><div class="bar-count">3</div></div>
-        <div class="bar-item" data-detail="bu-lac"><div class="bar-label">LAC-RA</div><div class="bar-track"><div class="bar-fill" data-w="2" style="width:2%;background:var(--yellow)"></div></div><div class="bar-count">1</div></div>
-        <div class="bar-item" data-detail="bu-biz"><div class="bar-label">BIZ NEX</div><div class="bar-track"><div class="bar-fill" data-w="2" style="width:2%;background:var(--red)"></div></div><div class="bar-count">1</div></div>
+        <div class="bar-item" data-detail="bu-tvp"><div class="bar-label">TVP</div><div class="bar-track"><div class="bar-fill" data-yk-w="bu_tvp_w" style="width:100%;background:var(--accent)"></div></div><div class="bar-count" data-yk="bu_tvp">50</div></div>
+        <div class="bar-item" data-detail="bu-trp"><div class="bar-label">TRP</div><div class="bar-track"><div class="bar-fill" data-yk-w="bu_trp_w" style="width:28%;background:var(--accent2)"></div></div><div class="bar-count" data-yk="bu_trp">14</div></div>
+        <div class="bar-item" data-detail="bu-ez"><div class="bar-label">TVP-Ez</div><div class="bar-track"><div class="bar-fill" data-yk-w="bu_ez_w" style="width:22%;background:var(--green)"></div></div><div class="bar-count" data-yk="bu_ez">11</div></div>
+        <div class="bar-item" data-detail="bu-uc"><div class="bar-label">TVP-Uc</div><div class="bar-track"><div class="bar-fill" data-yk-w="bu_uc_w" style="width:6%;background:var(--orange)"></div></div><div class="bar-count" data-yk="bu_uc">3</div></div>
+        <div class="bar-item" data-detail="bu-lac"><div class="bar-label">LAC-RA</div><div class="bar-track"><div class="bar-fill" data-yk-w="bu_lac_w" style="width:2%;background:var(--yellow)"></div></div><div class="bar-count" data-yk="bu_lac">1</div></div>
+        <div class="bar-item" data-detail="bu-biz"><div class="bar-label">BIZ NEX</div><div class="bar-track"><div class="bar-fill" data-yk-w="bu_biz_w" style="width:2%;background:var(--red)"></div></div><div class="bar-count" data-yk="bu_biz">1</div></div>
       </div>
     </div>
     <div class="card fade-in d2"><div class="card-title"><span class="ttl">สัดส่วน BU</span><span class="meta">%</span></div>
       <div style="text-align:center;margin-bottom:14px"><svg width="170" height="170" viewBox="0 0 170 170">
-        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--accent)" stroke-width="14" stroke-dasharray="235.6 141.4" stroke-dashoffset="0" transform="rotate(-90 85 85)"/>
-        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--accent2)" stroke-width="14" stroke-dasharray="66 311" stroke-dashoffset="-235.6" transform="rotate(-90 85 85)"/>
-        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--green)" stroke-width="14" stroke-dasharray="51.8 325.2" stroke-dashoffset="-301.6" transform="rotate(-90 85 85)"/>
-        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--orange)" stroke-width="14" stroke-dasharray="14.1 363" stroke-dashoffset="-353.4" transform="rotate(-90 85 85)"/>
-        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--yellow)" stroke-width="14" stroke-dasharray="9.4 367.6" stroke-dashoffset="-367.5" transform="rotate(-90 85 85)"/>
-        <text x="85" y="82" text-anchor="middle" fill="var(--ink)" font-size="24" font-weight="600">80</text>
+        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--accent)" stroke-width="14" stroke-dasharray="235.6 141.4" stroke-dashoffset="0" transform="rotate(-90 85 85)" data-yk-arr="pieArrTvp"/>
+        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--accent2)" stroke-width="14" stroke-dasharray="66 311" stroke-dashoffset="-235.6" transform="rotate(-90 85 85)" data-yk-arr="pieArrTrp" data-yk-off="pieOffTrp"/>
+        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--green)" stroke-width="14" stroke-dasharray="51.8 325.2" stroke-dashoffset="-301.6" transform="rotate(-90 85 85)" data-yk-arr="pieArrEz" data-yk-off="pieOffEz"/>
+        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--orange)" stroke-width="14" stroke-dasharray="14.1 363" stroke-dashoffset="-353.4" transform="rotate(-90 85 85)" data-yk-arr="pieArrUc" data-yk-off="pieOffUc"/>
+        <circle cx="85" cy="85" r="60" fill="none" stroke="var(--yellow)" stroke-width="14" stroke-dasharray="9.4 367.6" stroke-dashoffset="-367.5" transform="rotate(-90 85 85)" data-yk-arr="pieArrOther" data-yk-off="pieOffOther"/>
+        <text x="85" y="82" text-anchor="middle" fill="var(--ink)" font-size="24" font-weight="600" data-yk="statusTotal">80</text>
         <text x="85" y="100" text-anchor="middle" fill="var(--muted)" font-size="10">รายการ</text></svg></div>
       <div style="display:grid;grid-template-columns:1fr;gap:8px;font-size:12px">
-        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--accent)"></span>TVP <strong class="mono" style="margin-left:auto">62%</strong></div>
-        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--accent2)"></span>TRP <strong class="mono" style="margin-left:auto">18%</strong></div>
-        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--green)"></span>TVP-Ez <strong class="mono" style="margin-left:auto">14%</strong></div>
-        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--orange)"></span>TVP-Uc <strong class="mono" style="margin-left:auto">4%</strong></div>
-        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--yellow)"></span>อื่น ๆ <strong class="mono" style="margin-left:auto">2%</strong></div>
+        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--accent)"></span>TVP <strong class="mono" data-yk="buTvpPct" style="margin-left:auto">62%</strong></div>
+        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--accent2)"></span>TRP <strong class="mono" data-yk="buTrpPct" style="margin-left:auto">18%</strong></div>
+        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--green)"></span>TVP-Ez <strong class="mono" data-yk="buEzPct" style="margin-left:auto">14%</strong></div>
+        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--orange)"></span>TVP-Uc <strong class="mono" data-yk="buUcPct" style="margin-left:auto">4%</strong></div>
+        <div style="display:flex;align-items:center;gap:8px"><span class="dot" style="background:var(--yellow)"></span>อื่น ๆ <strong class="mono" data-yk="buOtherPct" style="margin-left:auto">2%</strong></div>
       </div>
     </div>
   </div>
@@ -467,47 +467,47 @@ svg text{font-family:var(--font-num)}
 <div class="section" data-section="recruiter">
   <div class="card fade-in d1"><div class="card-title"><span class="ttl">ประสิทธิภาพ Recruiter</span><span class="meta">5 PEOPLE · SLA = OK / OVER</span></div>
     <div style="overflow-x:auto"><table class="table"><thead><tr><th>ผู้รับผิดชอบ</th><th>ทั้งหมด</th><th>รับเข้าแล้ว</th><th>อัตราสำเร็จ</th><th>SLA</th><th style="min-width:140px">ประสิทธิภาพ</th></tr></thead><tbody>
-      <tr class="row-clickable" data-detail="rec-fluke"><td><strong>ฟลุ๊ค</strong></td><td class="num">26</td><td><span class="pill hired">15</span></td><td class="num"><strong>57.7%</strong></td><td class="num" style="color:var(--green)">✓ 23 / 2</td><td><div class="mini-bar"><div class="mini-fill" data-w="92" style="width:92%;background:var(--green)"></div><div class="mini-fill" data-w="8" style="width:8%;background:var(--red)"></div></div></td></tr>
-      <tr class="row-clickable" data-detail="rec-poj"><td><strong>พจน์</strong></td><td class="num">24</td><td><span class="pill hired">8</span></td><td class="num"><strong>33.3%</strong></td><td class="num" style="color:var(--orange)">! 10 / 9</td><td><div class="mini-bar"><div class="mini-fill" data-w="53" style="width:53%;background:var(--green)"></div><div class="mini-fill" data-w="47" style="width:47%;background:var(--red)"></div></div></td></tr>
-      <tr class="row-clickable" data-detail="rec-jom"><td><strong>จ๋อมแจ๋ม</strong></td><td class="num">18</td><td><span class="pill hired">7</span></td><td class="num"><strong>38.9%</strong></td><td class="num" style="color:var(--orange)">! 9 / 6</td><td><div class="mini-bar"><div class="mini-fill" data-w="60" style="width:60%;background:var(--green)"></div><div class="mini-fill" data-w="40" style="width:40%;background:var(--red)"></div></div></td></tr>
-      <tr class="row-clickable" data-detail="rec-nay"><td><strong>เน</strong></td><td class="num">7</td><td><span class="pill hired">7</span></td><td class="num"><strong style="color:var(--green)">100%</strong></td><td class="num" style="color:var(--green)">✓ 7 / 0</td><td><div class="mini-bar"><div class="mini-fill" data-w="100" style="width:100%;background:var(--green)"></div></div></td></tr>
-      <tr class="row-clickable" data-detail="rec-gem"><td><strong>เจม</strong></td><td class="num">5</td><td><span class="pill hired">4</span></td><td class="num"><strong style="color:var(--green)">80%</strong></td><td class="num" style="color:var(--green)">✓ 5 / 0</td><td><div class="mini-bar"><div class="mini-fill" data-w="100" style="width:100%;background:var(--green)"></div></div></td></tr>
-    </tbody></table></div>
+          <tr class="row-clickable" data-detail="rec-fluke"><td><strong>ฟลุ๊ค</strong></td><td class="num" data-yk="rec_fluke_t">26</td><td><span class="pill hired" data-yk="rec_fluke_h">15</span></td><td class="num"><strong data-yk="rec_fluke_r">57.7%</strong></td><td class="num" style="color:var(--green)" data-yk="rec_fluke_s">✓ 23 / 2</td><td><div class="mini-bar"><div class="mini-fill" data-yk-w="rec_fluke_okw" style="width:92%;background:var(--green)"></div><div class="mini-fill" data-yk-w="rec_fluke_overw" style="width:8%;background:var(--red)"></div></div></td></tr>
+          <tr class="row-clickable" data-detail="rec-poj"><td><strong>พจน์</strong></td><td class="num" data-yk="rec_poj_t">24</td><td><span class="pill hired" data-yk="rec_poj_h">8</span></td><td class="num"><strong data-yk="rec_poj_r">33.3%</strong></td><td class="num" style="color:var(--orange)" data-yk="rec_poj_s">! 10 / 9</td><td><div class="mini-bar"><div class="mini-fill" data-yk-w="rec_poj_okw" style="width:53%;background:var(--green)"></div><div class="mini-fill" data-yk-w="rec_poj_overw" style="width:47%;background:var(--red)"></div></div></td></tr>
+          <tr class="row-clickable" data-detail="rec-jom"><td><strong>จ๋อมแจ๋ม</strong></td><td class="num" data-yk="rec_jom_t">18</td><td><span class="pill hired" data-yk="rec_jom_h">7</span></td><td class="num"><strong data-yk="rec_jom_r">38.9%</strong></td><td class="num" style="color:var(--orange)" data-yk="rec_jom_s">! 9 / 6</td><td><div class="mini-bar"><div class="mini-fill" data-yk-w="rec_jom_okw" style="width:60%;background:var(--green)"></div><div class="mini-fill" data-yk-w="rec_jom_overw" style="width:40%;background:var(--red)"></div></div></td></tr>
+          <tr class="row-clickable" data-detail="rec-nay"><td><strong>เน</strong></td><td class="num" data-yk="rec_nay_t">7</td><td><span class="pill hired" data-yk="rec_nay_h">7</span></td><td class="num"><strong style="color:var(--green)" data-yk="rec_nay_r">100%</strong></td><td class="num" style="color:var(--green)" data-yk="rec_nay_s">✓ 7 / 0</td><td><div class="mini-bar"><div class="mini-fill" data-yk-w="rec_nay_okw" style="width:100%;background:var(--green)"></div></div></td></tr>
+          <tr class="row-clickable" data-detail="rec-gem"><td><strong>เจม</strong></td><td class="num" data-yk="rec_gem_t">5</td><td><span class="pill hired" data-yk="rec_gem_h">4</span></td><td class="num"><strong style="color:var(--green)" data-yk="rec_gem_r">80%</strong></td><td class="num" style="color:var(--green)" data-yk="rec_gem_s">✓ 5 / 0</td><td><div class="mini-bar"><div class="mini-fill" data-yk-w="rec_gem_okw" style="width:100%;background:var(--green)"></div></div></td></tr>
+        </tbody></table></div>
     <p style="font-size:11px;color:var(--ink-3);margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-family:var(--font-num)"><strong style="color:var(--ink-2)">SLA</strong> = ภายในเวลา / เกินเวลา · TOP <strong style="color:var(--green)">เน · 100% HIT</strong> · คลิกแถวเพื่อดูรายละเอียด</p>
   </div>
 </div>
 
 <div class="section" data-section="source">
-  <div class="card fade-in d1"><div class="card-title"><span class="ttl">แหล่งที่มาของ Candidate</span><span class="meta">40 ITEMS · 7 CHANNELS</span></div>
+  <div class="card fade-in d1"><div class="card-title"><span class="ttl">แหล่งที่มาของ Candidate</span><span class="meta"><span data-yk="srcTotal">40</span> ITEMS · <span data-yk="srcChannels">7</span> CHANNELS</span></div>
     <div class="source-list">
-      <div class="source-item" data-detail="src-internal"><div class="source-name">หัวหน้า / เพื่อนแนะนำ</div><div class="source-bar-wrap"><div class="bar-fill" data-w="100" style="width:100%;height:6px;background:var(--green);border-radius:99px"></div></div><div class="source-num">14</div></div>
-      <div class="source-item" data-detail="src-jobthai"><div class="source-name">JobThai</div><div class="source-bar-wrap"><div class="bar-fill" data-w="64" style="width:64%;height:6px;background:var(--accent);border-radius:99px"></div></div><div class="source-num">9</div></div>
-      <div class="source-item" data-detail="src-jobsdb"><div class="source-name">JobsDB</div><div class="source-bar-wrap"><div class="bar-fill" data-w="36" style="width:36%;height:6px;background:var(--accent2);border-radius:99px"></div></div><div class="source-num">5</div></div>
-      <div class="source-item" data-detail="src-agency"><div class="source-name">Agency</div><div class="source-bar-wrap"><div class="bar-fill" data-w="21" style="width:21%;height:6px;background:var(--orange);border-radius:99px"></div></div><div class="source-num">3</div></div>
-      <div class="source-item" data-detail="src-fb"><div class="source-name">Facebook</div><div class="source-bar-wrap"><div class="bar-fill" data-w="21" style="width:21%;height:6px;background:var(--cyan);border-radius:99px"></div></div><div class="source-num">3</div></div>
-      <div class="source-item" data-detail="src-jobbkk"><div class="source-name">JobBKK</div><div class="source-bar-wrap"><div class="bar-fill" data-w="21" style="width:21%;height:6px;background:var(--yellow);border-radius:99px"></div></div><div class="source-num">3</div></div>
-      <div class="source-item" data-detail="src-rehire"><div class="source-name">พนักงานเก่า / โอนย้าย</div><div class="source-bar-wrap"><div class="bar-fill" data-w="21" style="width:21%;height:6px;background:var(--red);border-radius:99px"></div></div><div class="source-num">3</div></div>
+      <div class="source-item" data-detail="src-internal"><div class="source-name">หัวหน้า / เพื่อนแนะนำ</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_internal_w" style="width:100%;height:6px;background:var(--green);border-radius:99px"></div></div><div class="source-num" data-yk="s_internal">14</div></div>
+      <div class="source-item" data-detail="src-jobthai"><div class="source-name">JobThai</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_jobthai_w" style="width:64%;height:6px;background:var(--accent);border-radius:99px"></div></div><div class="source-num" data-yk="s_jobthai">9</div></div>
+      <div class="source-item" data-detail="src-jobsdb"><div class="source-name">JobsDB</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_jobsdb_w" style="width:36%;height:6px;background:var(--accent2);border-radius:99px"></div></div><div class="source-num" data-yk="s_jobsdb">5</div></div>
+      <div class="source-item" data-detail="src-agency"><div class="source-name">Agency</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_agency_w" style="width:21%;height:6px;background:var(--orange);border-radius:99px"></div></div><div class="source-num" data-yk="s_agency">3</div></div>
+      <div class="source-item" data-detail="src-fb"><div class="source-name">Facebook</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_fb_w" style="width:21%;height:6px;background:var(--cyan);border-radius:99px"></div></div><div class="source-num" data-yk="s_fb">3</div></div>
+      <div class="source-item" data-detail="src-jobbkk"><div class="source-name">JobBKK</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_jobbkk_w" style="width:21%;height:6px;background:var(--yellow);border-radius:99px"></div></div><div class="source-num" data-yk="s_jobbkk">3</div></div>
+      <div class="source-item" data-detail="src-rehire"><div class="source-name">พนักงานเก่า / โอนย้าย</div><div class="source-bar-wrap"><div class="bar-fill" data-yk-w="s_rehire_w" style="width:21%;height:6px;background:var(--red);border-radius:99px"></div></div><div class="source-num" data-yk="s_rehire">3</div></div>
     </div>
     <div style="margin-top:24px;padding-top:18px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-      <div class="pill-card pc-green" data-detail="grp-internal"><div class="pc-val">14</div><div class="pc-label">Internal Network</div></div>
-      <div class="pill-card pc-blue" data-detail="grp-online"><div class="pc-val">20</div><div class="pc-label">Online Job Board</div></div>
-      <div class="pill-card pc-orange" data-detail="grp-agency"><div class="pc-val">3</div><div class="pc-label">Agency</div></div>
+      <div class="pill-card pc-green" data-detail="grp-internal"><div class="pc-val" data-yk="grp_internal">14</div><div class="pc-label">Internal Network</div></div>
+      <div class="pill-card pc-blue" data-detail="grp-online"><div class="pc-val" data-yk="grp_online">20</div><div class="pc-label">Online Job Board</div></div>
+      <div class="pill-card pc-orange" data-detail="grp-agency"><div class="pc-val" data-yk="grp_agency">3</div><div class="pc-label">Agency</div></div>
     </div>
   </div>
 </div>
 
 <div class="section" data-section="pending">
-  <div class="card fade-in d1"><div class="card-title"><span class="ttl">อัตราค้างรับ จำแนกตาม BU</span><span class="meta">26 ITEMS</span></div>
+  <div class="card fade-in d1"><div class="card-title"><span class="ttl">อัตราค้างรับ จำแนกตาม BU</span><span class="meta"><span data-yk="pending">26</span> ITEMS</span></div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px">
-      <div class="pill-card pc-blue" data-detail="pend-tvp"><div class="pc-val">16</div><div class="pc-label">TVP</div></div>
-      <div class="pill-card pc-green" data-detail="pend-ez"><div class="pc-val">7</div><div class="pc-label">TVP-Ez</div></div>
-      <div class="pill-card pc-purple" data-detail="pend-trp"><div class="pc-val">2</div><div class="pc-label">TRP</div></div>
-      <div class="pill-card pc-orange" data-detail="pend-uc"><div class="pc-val">1</div><div class="pc-label">TVP-Uc</div></div>
+      <div class="pill-card pc-blue" data-detail="pend-tvp"><div class="pc-val" data-yk="p_tvp">16</div><div class="pc-label">TVP</div></div>
+      <div class="pill-card pc-green" data-detail="pend-ez"><div class="pc-val" data-yk="p_ez">7</div><div class="pc-label">TVP-Ez</div></div>
+      <div class="pill-card pc-purple" data-detail="pend-trp"><div class="pc-val" data-yk="p_trp">2</div><div class="pc-label">TRP</div></div>
+      <div class="pill-card pc-orange" data-detail="pend-uc"><div class="pc-val" data-yk="p_uc">1</div><div class="pc-label">TVP-Uc</div></div>
     </div>
     <div style="background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:flex-start;gap:14px">
       <div style="font-family:var(--font-num);font-size:11px;color:var(--red);background:var(--red-soft);padding:6px 10px;border-radius:4px;font-weight:600;flex-shrink:0">ALERT</div>
       <div style="flex:1">
-        <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px">ต้องติดตาม 26 อัตรา</div>
+        <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px">ต้องติดตาม <span data-yk="pending">26</span> อัตรา</div>
         <div style="font-size:12.5px;color:var(--ink-3);line-height:1.6">อัตราที่ยังรอบรรจุพนักงาน ส่วนใหญ่อยู่ใน <strong style="color:var(--accent)">TVP (62%)</strong> และ <strong style="color:var(--green)">TVP-Ez (27%)</strong> ควรเร่งดำเนินการเพื่อปิดอัตราภายในกำหนด SLA</div>
       </div>
     </div>
@@ -515,7 +515,7 @@ svg text{font-family:var(--font-num)}
 </div>
 
 <div class="footer fade-in d6">
-  <strong>HR RECRUITMENT DASHBOARD · TVP GROUP</strong> · ข้อมูล ณ <span id="footerDate">29 เม.ย. 2569</span> · SOURCE: DataSheet · <span id="footerTotal">236</span> RECORDS
+  <strong>HR RECRUITMENT DASHBOARD · TVP GROUP</strong> · ข้อมูล ณ <span id="footerDate" data-yk="asOf">29 เม.ย. 2569</span> · SOURCE: DataSheet · <span id="footerTotal" data-yk="total">236</span> RECORDS
 </div>
 
 <div class="backdrop" id="backdrop"></div>
@@ -872,18 +872,201 @@ b:`<div class="drawer-section"><h4>วิธีรับ URL CSV</h4>
     statusText.textContent = text;
   }
 
-  /* ----- Year dropdown ----- */
+  /* ----- Year data + render ----- */
+  const YEAR_DATA = {
+    '2569': {
+      year:'2569', asOf:'29 เม.ย. 2569',
+      total:236, hired:41, wip:28, pending:26, days:28, hiredPct:'55%',
+      statusTotal:80, cancel:11,
+      statusArrH:'154.4 147.1',
+      statusArrW:'105.5 196', statusOffW:'-154.4',
+      statusArrP:'98 203.5', statusOffP:'-259.9',
+      statusArrC:'41.4 260.1', statusOffC:'-357.9',
+      m1:30, m1h:'100%', m1n:'JAN',
+      m2:17, m2h:'57%',  m2n:'FEB',
+      m3:16, m3h:'53%',  m3n:'MAR',
+      m4:17, m4h:'57%',  m4n:'APR',
+      monthAvg:20, monthTotal:80,
+      slaTotal:71, slaPct:'76%', slaWithin:54, slaOver:17, slaArr:'262.7 82.6',
+      jobPerm:68, jobTemp:12,
+      rep_resign:43, rep_resign_w:'100%',
+      rep_budget:24, rep_budget_w:'56%',
+      rep_restruct_extra:6, rep_restruct_extra_w:'14%',
+      rep_restruct:3, rep_restruct_w:'7%',
+      rep_transfer:1, rep_transfer_w:'2%',
+      d1n:'01 · ฝ่ายนายหน้าประกันภัย', d1v:7, d1w:'100%',
+      d2n:'02 · ส่วนงานบัญชี', d2v:6, d2w:'86%',
+      d3n:'03 · อีซี่คาร์ (ทีม 1)', d3v:5, d3w:'71%',
+      d4n:'04 · บุคคลระยะสั้น สุขุมวิท', d4v:4, d4w:'57%',
+      d5n:'05 · อีซี่คาร์ (Flexi)', d5v:4, d5w:'57%',
+      bu_tvp:50, bu_tvp_w:'100%',
+      bu_trp:14, bu_trp_w:'28%',
+      bu_ez:11, bu_ez_w:'22%',
+      bu_uc:3, bu_uc_w:'6%',
+      bu_lac:1, bu_lac_w:'2%',
+      bu_biz:1, bu_biz_w:'2%',
+      pieArrTvp:'235.6 141.4',
+      pieArrTrp:'66 311', pieOffTrp:'-235.6',
+      pieArrEz:'51.8 325.2', pieOffEz:'-301.6',
+      pieArrUc:'14.1 363', pieOffUc:'-353.4',
+      pieArrOther:'9.4 367.6', pieOffOther:'-367.5',
+      buTvpPct:'62%', buTrpPct:'18%', buEzPct:'14%', buUcPct:'4%', buOtherPct:'2%',
+      rec_fluke_t:26, rec_fluke_h:15, rec_fluke_r:'57.7%', rec_fluke_s:'✓ 23 / 2', rec_fluke_okw:'92%', rec_fluke_overw:'8%',
+      rec_poj_t:24,   rec_poj_h:8,   rec_poj_r:'33.3%',  rec_poj_s:'! 10 / 9', rec_poj_okw:'53%',  rec_poj_overw:'47%',
+      rec_jom_t:18,   rec_jom_h:7,   rec_jom_r:'38.9%',  rec_jom_s:'! 9 / 6',  rec_jom_okw:'60%',  rec_jom_overw:'40%',
+      rec_nay_t:7,    rec_nay_h:7,   rec_nay_r:'100%',   rec_nay_s:'✓ 7 / 0',  rec_nay_okw:'100%', rec_nay_overw:'0%',
+      rec_gem_t:5,    rec_gem_h:4,   rec_gem_r:'80%',    rec_gem_s:'✓ 5 / 0',  rec_gem_okw:'100%', rec_gem_overw:'0%',
+      s_internal:14, s_internal_w:'100%',
+      s_jobthai:9, s_jobthai_w:'64%',
+      s_jobsdb:5, s_jobsdb_w:'36%',
+      s_agency:3, s_agency_w:'21%',
+      s_fb:3, s_fb_w:'21%',
+      s_jobbkk:3, s_jobbkk_w:'21%',
+      s_rehire:3, s_rehire_w:'21%',
+      srcTotal:40, srcChannels:7,
+      grp_internal:14, grp_online:20, grp_agency:3,
+      p_tvp:16, p_ez:7, p_trp:2, p_uc:1
+    },
+    '2568': {
+      year:'2568', asOf:'31 ส.ค. 2568 (ปิดปี)',
+      total:285, hired:198, wip:4, pending:12, days:32, hiredPct:'92%',
+      statusTotal:228, cancel:14,
+      statusArrH:'262 39.6',
+      statusArrW:'5.3 296.3', statusOffW:'-262',
+      statusArrP:'15.9 285.7', statusOffP:'-267.3',
+      statusArrC:'18.5 283.1', statusOffC:'-283.2',
+      m1:22, m1h:'73%', m1n:'พ.ค.',
+      m2:18, m2h:'60%', m2n:'มิ.ย.',
+      m3:15, m3h:'50%', m3n:'ก.ค.',
+      m4:30, m4h:'100%', m4n:'ส.ค.',
+      monthAvg:24, monthTotal:285,
+      slaTotal:222, slaPct:'81%', slaWithin:180, slaOver:42, slaArr:'279.5 65.8',
+      jobPerm:180, jobTemp:34,
+      rep_resign:120, rep_resign_w:'100%',
+      rep_budget:75, rep_budget_w:'62%',
+      rep_restruct_extra:12, rep_restruct_extra_w:'10%',
+      rep_restruct:8, rep_restruct_w:'7%',
+      rep_transfer:5, rep_transfer_w:'4%',
+      d1n:'01 · ฝ่ายขายอีซี่คาร์ (ทีม 1)', d1v:32, d1w:'100%',
+      d2n:'02 · ฝ่ายนายหน้าประกันภัย', d2v:28, d2w:'88%',
+      d3n:'03 · ส่วนงานบัญชี', d3v:24, d3w:'75%',
+      d4n:'04 · IT', d4v:18, d4w:'56%',
+      d5n:'05 · ขายบุคคลระยะสั้น', d5v:15, d5w:'47%',
+      bu_tvp:130, bu_tvp_w:'100%',
+      bu_trp:36, bu_trp_w:'28%',
+      bu_ez:35, bu_ez_w:'27%',
+      bu_uc:10, bu_uc_w:'8%',
+      bu_lac:2, bu_lac_w:'2%',
+      bu_biz:1, bu_biz_w:'1%',
+      pieArrTvp:'229.9 147.1',
+      pieArrTrp:'63.6 313.4', pieOffTrp:'-229.9',
+      pieArrEz:'61.9 315.1', pieOffEz:'-293.5',
+      pieArrUc:'17.7 359.3', pieOffUc:'-355.4',
+      pieArrOther:'5.3 371.7', pieOffOther:'-373.1',
+      buTvpPct:'61%', buTrpPct:'17%', buEzPct:'16%', buUcPct:'5%', buOtherPct:'1%',
+      rec_fluke_t:78, rec_fluke_h:56, rec_fluke_r:'71.8%', rec_fluke_s:'✓ 70 / 8', rec_fluke_okw:'90%', rec_fluke_overw:'10%',
+      rec_poj_t:62,   rec_poj_h:38,   rec_poj_r:'61.3%',  rec_poj_s:'✓ 50 / 12', rec_poj_okw:'81%',  rec_poj_overw:'19%',
+      rec_jom_t:54,   rec_jom_h:42,   rec_jom_r:'77.8%',  rec_jom_s:'✓ 48 / 6',  rec_jom_okw:'89%',  rec_jom_overw:'11%',
+      rec_nay_t:38,   rec_nay_h:36,   rec_nay_r:'94.7%',  rec_nay_s:'✓ 36 / 2',  rec_nay_okw:'95%',  rec_nay_overw:'5%',
+      rec_gem_t:32,   rec_gem_h:26,   rec_gem_r:'81.3%',  rec_gem_s:'✓ 28 / 4',  rec_gem_okw:'88%',  rec_gem_overw:'12%',
+      s_internal:62, s_internal_w:'100%',
+      s_jobthai:45, s_jobthai_w:'73%',
+      s_jobsdb:32, s_jobsdb_w:'52%',
+      s_agency:18, s_agency_w:'29%',
+      s_fb:22, s_fb_w:'35%',
+      s_jobbkk:12, s_jobbkk_w:'19%',
+      s_rehire:8, s_rehire_w:'13%',
+      srcTotal:199, srcChannels:7,
+      grp_internal:70, grp_online:111, grp_agency:18,
+      p_tvp:8, p_ez:3, p_trp:1, p_uc:0
+    },
+    '2567': {
+      year:'2567', asOf:'31 ส.ค. 2567 (ปิดปี)',
+      total:312, hired:245, wip:2, pending:5, days:35, hiredPct:'97%',
+      statusTotal:252, cancel:20,
+      statusArrH:'293.5 8.1',
+      statusArrW:'2.4 299.2', statusOffW:'-293.5',
+      statusArrP:'6 295.6', statusOffP:'-295.9',
+      statusArrC:'24 277.6', statusOffC:'-301.9',
+      m1:32, m1h:'80%', m1n:'พ.ค.',
+      m2:28, m2h:'70%', m2n:'มิ.ย.',
+      m3:25, m3h:'62%', m3n:'ก.ค.',
+      m4:40, m4h:'100%', m4n:'ส.ค.',
+      monthAvg:26, monthTotal:312,
+      slaTotal:247, slaPct:'78%', slaWithin:193, slaOver:54, slaArr:'269.1 76.3',
+      jobPerm:220, jobTemp:32,
+      rep_resign:142, rep_resign_w:'100%',
+      rep_budget:78, rep_budget_w:'55%',
+      rep_restruct_extra:15, rep_restruct_extra_w:'11%',
+      rep_restruct:10, rep_restruct_w:'7%',
+      rep_transfer:7, rep_transfer_w:'5%',
+      d1n:'01 · ฝ่ายขายอีซี่คาร์', d1v:38, d1w:'100%',
+      d2n:'02 · ฝ่ายนายหน้าประกันภัย', d2v:32, d2w:'84%',
+      d3n:'03 · ส่วนงานบัญชี', d3v:25, d3w:'66%',
+      d4n:'04 · IT', d4v:20, d4w:'53%',
+      d5n:'05 · ทีมรถเช่า', d5v:18, d5w:'47%',
+      bu_tvp:165, bu_tvp_w:'100%',
+      bu_trp:42, bu_trp_w:'25%',
+      bu_ez:33, bu_ez_w:'20%',
+      bu_uc:8, bu_uc_w:'5%',
+      bu_lac:3, bu_lac_w:'2%',
+      bu_biz:1, bu_biz_w:'1%',
+      pieArrTvp:'246.9 130.1',
+      pieArrTrp:'62.9 314.1', pieOffTrp:'-246.9',
+      pieArrEz:'49.4 327.6', pieOffEz:'-309.8',
+      pieArrUc:'11.9 365.1', pieOffUc:'-359.2',
+      pieArrOther:'6 371', pieOffOther:'-371.1',
+      buTvpPct:'65%', buTrpPct:'17%', buEzPct:'13%', buUcPct:'3%', buOtherPct:'2%',
+      rec_fluke_t:92, rec_fluke_h:78, rec_fluke_r:'84.8%', rec_fluke_s:'✓ 85 / 7', rec_fluke_okw:'92%', rec_fluke_overw:'8%',
+      rec_poj_t:75,   rec_poj_h:60,   rec_poj_r:'80.0%',  rec_poj_s:'✓ 62 / 13', rec_poj_okw:'83%',  rec_poj_overw:'17%',
+      rec_jom_t:60,   rec_jom_h:52,   rec_jom_r:'86.7%',  rec_jom_s:'✓ 55 / 5',  rec_jom_okw:'92%',  rec_jom_overw:'8%',
+      rec_nay_t:45,   rec_nay_h:42,   rec_nay_r:'93.3%',  rec_nay_s:'✓ 42 / 3',  rec_nay_okw:'93%',  rec_nay_overw:'7%',
+      rec_gem_t:40,   rec_gem_h:33,   rec_gem_r:'82.5%',  rec_gem_s:'✓ 34 / 6',  rec_gem_okw:'85%',  rec_gem_overw:'15%',
+      s_internal:72, s_internal_w:'100%',
+      s_jobthai:55, s_jobthai_w:'76%',
+      s_jobsdb:40, s_jobsdb_w:'56%',
+      s_agency:25, s_agency_w:'35%',
+      s_fb:28, s_fb_w:'39%',
+      s_jobbkk:15, s_jobbkk_w:'21%',
+      s_rehire:10, s_rehire_w:'14%',
+      srcTotal:245, srcChannels:7,
+      grp_internal:82, grp_online:138, grp_agency:25,
+      p_tvp:3, p_ez:1, p_trp:1, p_uc:0
+    }
+  };
+
+  function renderYear(y) {
+    const data = YEAR_DATA[y] || YEAR_DATA['2569'];
+    document.querySelectorAll('[data-yk]').forEach(el => {
+      const k = el.dataset.yk;
+      if (data[k] !== undefined) el.textContent = data[k];
+    });
+    document.querySelectorAll('[data-yk-w]').forEach(el => {
+      const k = el.dataset.ykW;
+      if (data[k] !== undefined) el.style.width = data[k];
+    });
+    document.querySelectorAll('[data-yk-h]').forEach(el => {
+      const k = el.dataset.ykH;
+      if (data[k] !== undefined) el.style.height = data[k];
+    });
+    document.querySelectorAll('[data-yk-arr]').forEach(el => {
+      const k = el.dataset.ykArr;
+      if (data[k] !== undefined) el.setAttribute('stroke-dasharray', data[k]);
+    });
+    document.querySelectorAll('[data-yk-off]').forEach(el => {
+      const k = el.dataset.ykOff;
+      if (data[k] !== undefined) el.setAttribute('stroke-dashoffset', data[k]);
+    });
+  }
+
   const yearSel = document.getElementById('yearSelect');
   yearSel.addEventListener('change', () => {
     const y = yearSel.value;
-    document.getElementById('brandSub').textContent = `TVP GROUP · FY ${y} · สรุปผลการสรรหาบุคลากร`;
-    if (y === '2569') {
-      setStatus('idle', 'พร้อมใช้งาน · กำลังแสดงข้อมูลที่บันทึกไว้ (DataSheet · 29 เม.ย. 2569)');
-    } else {
-      setStatus('idle', `ยังไม่มีข้อมูลปี ${y} ในแคช · กด ⟳ Update เพื่อดึงข้อมูลจาก Google Sheets`);
-    }
+    renderYear(y);
+    const d = YEAR_DATA[y] || {};
+    setStatus('idle', 'แสดงข้อมูลปีงบประมาณ ' + y + ' · รวม ' + d.total + ' อัตรา · รับเข้า ' + d.hired + ' คน · ' + d.asOf);
   });
-
+  renderYear(yearSel.value);
   /* ----- Config (CSV URL) ----- */
   function getCsvUrl(){ return localStorage.getItem('csvUrl') || DEFAULT_CSV_URL; }
   function setCsvUrl(u){ localStorage.setItem('csvUrl', u); }
