@@ -309,19 +309,13 @@ svg text{font-family:var(--font-num)}
     <div class="brand-mark">HR</div>
     <div>
       <h1>Recruitment Dashboard</h1>
-      <p id="brandSub">TVP GROUP · FY <span data-yk="year">2569</span> · สรุปผลการสรรหาบุคลากร</p>
+      <p id="brandSub">TVP GROUP · ปีงบประมาณ 2568–2569 (ข้อมูลรวม) · สรุปผลการสรรหาบุคลากร</p>
     </div>
   </div>
   <div class="top-meta">
-    <div class="select-wrap">
-      <select class="select" id="yearSelect">
-        <option value="2569">ปีงบประมาณ 2569</option>
-        <option value="2568">ปีงบประมาณ 2568</option>
-        <option value="2567">ปีงบประมาณ 2567</option>
-      </select>
-    </div>
-    <div class="chip"><span class="lbl">UPDATED</span><span class="val" id="lastUpdate" data-yk="asOf">29 เม.ย. 2569</span></div>
-    <div class="chip"><span class="lbl">TOTAL</span><span class="val" id="totalChip" data-yk="total">236</span></div>
+    <div class="chip"><span class="lbl">FY</span><span class="val">2568–2569 (รวม)</span></div>
+    <div class="chip"><span class="lbl">UPDATED</span><span class="val" id="lastUpdate">15 พ.ค. 2569</span></div>
+    <div class="chip"><span class="lbl">TOTAL</span><span class="val" id="totalChip" data-yk="total">86</span></div>
     <button class="btn primary" id="updateBtn">⟳ Update</button>
     <button class="btn" id="configBtn" title="ตั้งค่า URL Google Sheets">⚙</button>
     <button class="btn" onclick="window.print()">⎙ Print</button>
@@ -378,7 +372,7 @@ svg text{font-family:var(--font-num)}
         <div class="month-col" data-detail="month-jan"><div class="month-num" data-yk="m1">30</div><div class="month-bar" data-yk-h="m1h" style="height:100%;background:var(--accent)"></div><div class="month-name" data-yk="m1n">JAN</div></div>
         <div class="month-col" data-detail="month-feb"><div class="month-num" data-yk="m2">17</div><div class="month-bar" data-yk-h="m2h" style="height:57%;background:var(--green)"></div><div class="month-name" data-yk="m2n">FEB</div></div>
         <div class="month-col" data-detail="month-mar"><div class="month-num" data-yk="m3">16</div><div class="month-bar" data-yk-h="m3h" style="height:53%;background:var(--orange)"></div><div class="month-name" data-yk="m3n">MAR</div></div>
-        <div class="month-col" data-detail="month-apr"><div class="month-num" data-yk="m4">17</div><div class="month-bar" data-yk-h="m4h" style="height:57%;background:var(--accent2)"></div><div class="month-name" data-yk="m4n">APR</div></div>
+        <div class="month-col" data-detail="month-apr"><div class="month-num" data-yk="m4">17</div><div class="month-bar" data-yk-h="m4h" style="height:57%;background:var(--accent2)"></div><div class="month-name" data-yk="m4n">APR</div></div><div class="month-col" data-detail="month-may"><div class="month-num" data-yk="m5">8</div><div class="month-bar" data-yk-h="m5h" style="height:27%;background:var(--cyan)"></div><div class="month-name" data-yk="m5n">MAY</div></div>
       </div>
       <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-family:var(--font-num)"><span>AVG <strong style="color:var(--ink)" data-yk="monthAvg">20</strong>/MO</span><span>TOTAL <strong style="color:var(--accent)" data-yk="monthTotal">80</strong></span></div>
     </div>
@@ -556,7 +550,7 @@ svg text{font-family:var(--font-num)}
 </div>
 
 <div class="footer fade-in d6">
-  <strong>HR RECRUITMENT DASHBOARD · TVP GROUP</strong> · ข้อมูล ณ <span id="footerDate" data-yk="asOf">29 เม.ย. 2569</span> · SOURCE: DataSheet · <span id="footerTotal" data-yk="total">236</span> RECORDS
+  <strong>HR RECRUITMENT DASHBOARD · TVP GROUP</strong> · ข้อมูล ณ <span id="footerDate">15 พ.ค. 2569</span> · SOURCE: DataSheet · <span id="footerTotal">86</span> RECORDS
 </div>
 
 <div class="backdrop" id="backdrop"></div>
@@ -919,412 +913,62 @@ b:`<div class="drawer-section"><h4>วิธีรับ URL CSV</h4>
 /* ============ POSITION DATA per year per drawer ============ */
 const PD = {
 '2569': {
-'kpi-total':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['พนง.บัญชี AP','TVP · ส่วนงานบัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez · ฝ่ายขายอีซี่คาร์','กำลังดำเนินการ','','5 ก.พ. 69','28/45 ว'],
-['Telesales สุขุมวิท','TVP · ขายบุคคลระยะสั้น','ค้างรับ','yellow','12 มี.ค. 69','62/45 ว ⚠'],
-['Operations Manager (รถเช่า)','TRP · Operations','กำลังดำเนินการ','','20 มี.ค. 69','54/90 ว']
-],
-'kpi-hired':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['พนง.บัญชี AP','TVP · ส่วนงานบัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['HR Specialist (Recruit)','TVP · ฝ่าย HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','รับเข้าแล้ว','green','8 ก.พ. 69','24/45 ว'],
-['Programmer (Java)','TVP · IT','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['ที่ปรึกษาขายรถเช่า','TRP · ทีมขาย','รับเข้าแล้ว','green','15 มี.ค. 69','35/45 ว']
-],
-'kpi-wip':[
-['Data Analyst','TVP · IT','สัมภาษณ์รอบ Manager','','10 เม.ย. 69','19/60 ว'],
-['Legal Manager','TVP · ฝ่ายกฎหมาย','ทำ Offer','orange','15 เม.ย. 69','74/90 ว'],
-['Operations Manager (รถเช่า)','TRP · Operations','สัมภาษณ์รอบ 1','','20 เม.ย. 69','54/90 ว'],
-['พนง.บัญชี AR','TVP · ส่วนงานบัญชี','รอ Screening CV','','25 เม.ย. 69','14/45 ว'],
-['Customer Service','TVP-Ez · CS','รอเริ่มงาน','green','28 เม.ย. 69','22/45 ว']
-],
-'kpi-pending':[
-['พนักงานขายหน้าสาขา','TVP · บางนา','ค้างรับ','red','5 ก.พ. 69','84/45 ว ⚠'],
-['Telesales','TVP · สุขุมวิท','ค้างรับ','red','8 ก.พ. 69','81/45 ว ⚠'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','ค้างรับ','red','12 ก.พ. 69','77/45 ว ⚠'],
-['พนง.ตรวจสภาพรถ','TVP-Ez · Operations','ค้างรับ','red','20 ก.พ. 69','69/45 ว ⚠'],
-['Fleet Specialist','TRP · Fleet','ค้างรับ','yellow','1 มี.ค. 69','60/60 ว'],
-['พนง.บัญชี AP','TVP-Uc · บัญชี','ค้างรับ','yellow','15 มี.ค. 69','46/45 ว ⚠']
-],
-'kpi-days':[
-['Telesales','TVP · สุขุมวิท','รับเข้า (28 ว)','green','ม.ค. 69','28/45 ว'],
-['พนง.บัญชี AP','TVP · บัญชี','รับเข้า (32 ว)','green','ม.ค. 69','32/45 ว'],
-['ที่ปรึกษาการขาย','TVP-Ez · Flexi','รับเข้า (24 ว)','green','ก.พ. 69','24/45 ว'],
-['Programmer','TVP · IT','รับเข้า (45 ว)','green','ก.พ. 69','45/60 ว'],
-['HR Specialist','TVP · HR','รับเข้า (38 ว)','green','มี.ค. 69','38/60 ว']
-],
-'status-hired':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['พนง.บัญชี AP','TVP · ส่วนงานบัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['HR Specialist','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['Programmer','TVP · IT','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['ที่ปรึกษาขายรถเช่า','TRP · ทีมขาย','รับเข้าแล้ว','green','15 มี.ค. 69','35/45 ว']
-],
-'status-wip':[
-['Data Analyst','TVP · IT','สัมภาษณ์รอบ Manager','','10 เม.ย. 69','19/60 ว'],
-['Legal Manager','TVP · ฝ่ายกฎหมาย','ทำ Offer','orange','15 เม.ย. 69','74/90 ว'],
-['Operations Manager','TRP · Operations','สัมภาษณ์รอบ 1','','20 เม.ย. 69','54/90 ว'],
-['Customer Service','TVP-Ez · CS','รอเริ่มงาน','green','28 เม.ย. 69','22/45 ว']
-],
-'status-pending':[
-['พนักงานขายหน้าสาขา','TVP · บางนา','ค้างรับ','red','5 ก.พ. 69','84/45 ว ⚠'],
-['Telesales','TVP · สุขุมวิท','ค้างรับ','red','8 ก.พ. 69','81/45 ว ⚠'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','ค้างรับ','red','12 ก.พ. 69','77/45 ว ⚠'],
-['พนง.ตรวจสภาพรถ','TVP-Ez · Operations','ค้างรับ','red','20 ก.พ. 69','69/45 ว ⚠']
-],
-'status-cancel':[
-['Marketing Specialist','TVP · การตลาด','ยกเลิก','red','20 มี.ค. 69','—'],
-['PMO Manager','TVP · Strategy','ชะลอ','red','10 เม.ย. 69','—'],
-['IT Security','TVP · IT','ยกเลิก','red','15 เม.ย. 69','—']
-],
-'month-jan':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['พนง.บัญชี AP','TVP · บัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['Telesales (×3)','TVP · ขายบุคคลระยะสั้น','กำลังดำเนินการ','','25 ม.ค. 69','98/45 ว ⚠'],
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez · ทีม 1','รับเข้าแล้ว','green','28 ม.ค. 69','42/45 ว'],
-['Operations รถเช่า','TRP · Operations','ค้างรับ','red','30 ม.ค. 69','92/45 ว ⚠']
-],
-'month-feb':[
-['HR Specialist (Recruit)','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','รับเข้าแล้ว','green','8 ก.พ. 69','24/45 ว'],
-['Programmer (Java)','TVP · IT','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['Fleet Specialist','TRP · Fleet','ค้างรับ','red','25 ก.พ. 69','64/60 ว ⚠']
-],
-'month-mar':[
-['ที่ปรึกษาขายรถเช่า','TRP · ทีมขาย','รับเข้าแล้ว','green','15 มี.ค. 69','35/45 ว'],
-['พนง.บัญชี AR','TVP · บัญชี','กำลังดำเนินการ','','18 มี.ค. 69','42/45 ว'],
-['Operations Manager (รถเช่า)','TRP · Operations','กำลังดำเนินการ','','20 มี.ค. 69','54/90 ว'],
-['Marketing Specialist','TVP · การตลาด','ยกเลิก','red','25 มี.ค. 69','—']
-],
-'month-apr':[
-['Data Analyst','TVP · IT','สัมภาษณ์รอบ Manager','','10 เม.ย. 69','19/60 ว'],
-['Legal Manager','TVP · ฝ่ายกฎหมาย','ทำ Offer','orange','15 เม.ย. 69','74/90 ว'],
-['Customer Service','TVP-Ez · CS','รอเริ่มงาน','green','28 เม.ย. 69','22/45 ว'],
-['IT Security','TVP · IT','ยกเลิก','red','15 เม.ย. 69','—']
-],
-'sla':[
-['Telesales','TVP · สุขุมวิท','✓ ภายในเวลา','green','ม.ค. 69','28/45 ว'],
-['Programmer (Java)','TVP · IT','✓ ภายในเวลา','green','ก.พ. 69','45/60 ว'],
-['พนง.บัญชี (CPA)','TVP · บัญชี','! เกิน SLA','red','มี.ค. 69','72/60 ว ⚠'],
-['Operations Manager','TRP · Operations','! เกิน SLA','red','มี.ค. 69','105/90 ว ⚠']
-],
-'job-permanent':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['พนง.บัญชี AP','TVP · บัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['Programmer','TVP · IT','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['ที่ปรึกษาขายอีซี่คาร์','TVP-Ez · ทีม 1','รับเข้าแล้ว','green','8 ก.พ. 69','24/45 ว'],
-['HR Specialist','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว']
-],
-'job-temporary':[
-['พนง.รับรถผู้บริหาร','TVP · ธุรการ','รับเข้าแล้ว','green','15 ก.พ. 69','18/45 ว'],
-['Customer Service (โครงการ)','TVP-Ez · CS','กำลังดำเนินการ','','5 มี.ค. 69','21/45 ว'],
-['ที่ปรึกษาการขาย (Peak)','TVP-Ez · Flexi','รับเข้าแล้ว','green','20 มี.ค. 69','15/45 ว'],
-['Telesales (สัญญา)','TVP · สุขุมวิท','รับเข้าแล้ว','green','10 เม.ย. 69','25/45 ว']
-],
-'rep-resign':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['Telesales','TVP · สุขุมวิท','รับเข้าแล้ว','green','20 ม.ค. 69','25/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์','TVP-Ez · ทีม 1','กำลังดำเนินการ','','5 ก.พ. 69','84/45 ว ⚠'],
-['พนง.บัญชี AR','TVP · บัญชี','ค้างรับ','red','15 มี.ค. 69','46/45 ว ⚠']
-],
-'rep-budget':[
-['HR Specialist','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['Data Analyst','TVP · IT','สัมภาษณ์รอบ Manager','','10 เม.ย. 69','19/60 ว'],
-['Fleet Specialist','TRP · Fleet','รับเข้าแล้ว','green','15 ก.พ. 69','52/60 ว']
-],
-'rep-restruct-extra':[
-['Digital Transformation Lead','TVP · Strategy','ทำ Offer','orange','20 มี.ค. 69','40/90 ว'],
-['AI Specialist','TVP · IT','สัมภาษณ์','','10 เม.ย. 69','19/60 ว'],
-['PMO Manager','TVP · Strategy','ชะลอ','red','15 เม.ย. 69','—']
-],
-'rep-restruct':[
-['Head of BIZ NEX','BIZ NEX · Management','สัมภาษณ์รอบ 1','','5 เม.ย. 69','24/90 ว'],
-['Lead Specialist (LAC-RA)','LAC-RA · Management','รอ Screening','','12 เม.ย. 69','17/60 ว']
-],
-'rep-transfer':[['Operations Specialist','TRP · Operations (โอนย้าย)','รับเข้าแล้ว','green','10 มี.ค. 69','30/60 ว']],
-'dept-insur':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ทีม 1','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ทีม 2','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['Senior Broker','TVP · ทีม 1','กำลังดำเนินการ','','10 ก.พ. 69','78/60 ว ⚠'],
-['Manager · ฝ่ายนายหน้า','TVP · Management','ทำ Offer','orange','15 มี.ค. 69','45/90 ว'],
-['Telesales ประกันภัย (×3)','TVP · ทีม 3','ค้างรับ','red','20 มี.ค. 69','55/45 ว ⚠']
-],
-'dept-acct':[
-['พนง.บัญชี AP','TVP · ส่วนงานบัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['พนง.บัญชี AR','TVP · ส่วนงานบัญชี','กำลังดำเนินการ','','18 มี.ค. 69','42/45 ว'],
-['บัญชี (CPA)','TVP · SLA 60','! เกิน SLA','red','5 ก.พ. 69','84/60 ว ⚠'],
-['บัญชี (ปิดงบ)','TVP · บัญชี','รับเข้าแล้ว','green','10 มี.ค. 69','50/60 ว'],
-['Internal Auditor','TVP · ตรวจสอบภายใน','ทำ Offer','orange','20 เม.ย. 69','9/60 ว']
-],
-'dept-ezt1':[
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez','รับเข้าแล้ว','green','28 ม.ค. 69','42/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez','รับเข้าแล้ว','green','15 ก.พ. 69','25/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez','กำลังดำเนินการ','','5 มี.ค. 69','55/45 ว ⚠'],
-['Team Lead (ทีม 1)','TVP-Ez · Management','สัมภาษณ์','','20 มี.ค. 69','40/60 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez','ค้างรับ','red','10 เม.ย. 69','19/45 ว']
-],
-'dept-short':[
-['Telesales สุขุมวิท','TVP · ขายบุคคลระยะสั้น','รับเข้าแล้ว','green','20 ม.ค. 69','25/45 ว'],
-['Telesales สุขุมวิท','TVP','กำลังดำเนินการ','','5 มี.ค. 69','55/45 ว ⚠'],
-['Telesales สุขุมวิท','TVP','ค้างรับ','red','12 มี.ค. 69','48/45 ว ⚠'],
-['Manager (สุขุมวิท)','TVP · Management','สัมภาษณ์','','20 เม.ย. 69','9/90 ว']
-],
-'dept-flexi':[
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','รับเข้าแล้ว','green','8 ก.พ. 69','24/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','ค้างรับ','red','12 ก.พ. 69','77/45 ว ⚠'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','กำลังดำเนินการ','','20 มี.ค. 69','40/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','รับเข้าแล้ว','green','10 เม.ย. 69','19/45 ว']
-],
-'bu-tvp':[
-['เจ้าหน้าที่นายหน้าประกันภัย','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','15 ม.ค. 69','22/45 ว'],
-['พนง.บัญชี AP','TVP · บัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['Programmer (Java)','TVP · IT','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['Telesales (×3)','TVP · สุขุมวิท','กำลังดำเนินการ','','5 มี.ค. 69','55/45 ว ⚠'],
-['Legal Manager','TVP · ฝ่ายกฎหมาย','ทำ Offer','orange','15 เม.ย. 69','74/90 ว'],
-['พนักงานขายหน้าสาขา','TVP · บางนา','ค้างรับ','red','5 ก.พ. 69','84/45 ว ⚠'],
-['HR Specialist','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว']
-],
-'bu-trp':[
-['ที่ปรึกษาขายรถเช่า','TRP · ทีมขาย','รับเข้าแล้ว','green','15 มี.ค. 69','35/45 ว'],
-['Fleet Specialist','TRP · Fleet','รับเข้าแล้ว','green','25 ก.พ. 69','55/60 ว'],
-['Operations Manager (รถเช่า)','TRP · Operations · SLA 90','กำลังดำเนินการ','','20 มี.ค. 69','54/90 ว'],
-['Fleet Specialist','TRP · Fleet','ค้างรับ','red','1 มี.ค. 69','60/60 ว'],
-['Operations Specialist','TRP · Operations','รับเข้าแล้ว','green','10 มี.ค. 69','30/60 ว']
-],
-'bu-ez':[
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez · ทีม 1','รับเข้าแล้ว','green','28 ม.ค. 69','42/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','รับเข้าแล้ว','green','8 ก.พ. 69','24/45 ว'],
-['พนง.ตรวจสภาพรถ','TVP-Ez · Operations','ค้างรับ','red','20 ก.พ. 69','69/45 ว ⚠'],
-['Customer Service','TVP-Ez · CS','รอเริ่มงาน','green','28 เม.ย. 69','22/45 ว'],
-['Team Lead (ทีม 1)','TVP-Ez · Management','สัมภาษณ์','','20 มี.ค. 69','40/60 ว']
-],
-'bu-uc':[
-['พนง.ขาย Used Car','TVP-Uc · ทีมขาย','รับเข้าแล้ว','green','10 ก.พ. 69','32/45 ว'],
-['พนง.บัญชี (Used Car)','TVP-Uc · บัญชี','ค้างรับ','yellow','15 มี.ค. 69','46/45 ว ⚠'],
-['ที่ปรึกษาขาย (Used Car)','TVP-Uc · ทีมขาย','กำลังดำเนินการ','','5 เม.ย. 69','24/45 ว']
-],
-'bu-lac':[['Lead Specialist (LAC-RA)','LAC-RA · Management','รอ Screening','','12 เม.ย. 69','17/60 ว']],
-'bu-biz':[['Head of BIZ NEX','BIZ NEX · Management · SLA 90','สัมภาษณ์รอบ 1','','5 เม.ย. 69','24/90 ว']],
-'rec-fluke':[
-['เจ้าหน้าที่นายหน้าประกันภัย (×4)','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','ม.ค.–มี.ค.','25/45 ว'],
-['Telesales (×3)','TVP · สุขุมวิท','รับเข้าแล้ว','green','ก.พ. 69','27/45 ว'],
-['Programmer','TVP · IT','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['HR Specialist','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['Legal Manager','TVP · ฝ่ายกฎหมาย','ทำ Offer','orange','15 เม.ย. 69','74/90 ว'],
-['พนักงานขายหน้าสาขา (×2)','TVP · บางนา','ค้างรับ','red','ก.พ. 69','82/45 ว ⚠']
-],
-'rec-poj':[
-['ที่ปรึกษาขายอีซี่คาร์ (×3)','TVP-Ez · ทีม 1/Flexi','รับเข้าแล้ว','green','ก.พ. 69','28/45 ว'],
-['Operations Manager (รถเช่า)','TRP · Operations','กำลังดำเนินการ','','20 มี.ค. 69','54/90 ว'],
-['พนง.บัญชี (CPA)','TVP · บัญชี','! เกิน SLA','red','5 ก.พ. 69','84/60 ว ⚠'],
-['Fleet Specialist (×2)','TRP · Fleet','ค้างรับ','red','ก.พ.–มี.ค.','65/60 ว ⚠'],
-['Data Analyst','TVP · IT','สัมภาษณ์รอบ Manager','','10 เม.ย. 69','19/60 ว']
-],
-'rec-jom':[
-['พนง.บัญชี AP/AR (×3)','TVP · บัญชี','รับเข้าแล้ว','green','ม.ค.–มี.ค.','35/45 ว'],
-['ที่ปรึกษาขาย Used Car','TVP-Uc · ทีมขาย','กำลังดำเนินการ','','5 เม.ย. 69','24/45 ว'],
-['Marketing Specialist','TVP · การตลาด','ยกเลิก','red','20 มี.ค. 69','—'],
-['พนง.ตรวจสภาพรถ','TVP-Ez · Operations','ค้างรับ','red','20 ก.พ. 69','69/45 ว ⚠']
-],
-'rec-nay':[
-['ที่ปรึกษาขายรถเช่า (×3)','TRP · ทีมขาย','รับเข้าแล้ว','green','ม.ค.–มี.ค.','35/45 ว'],
-['Operations Specialist','TRP · Operations','รับเข้าแล้ว','green','10 มี.ค. 69','30/60 ว'],
-['Fleet Specialist','TRP · Fleet','รับเข้าแล้ว','green','15 ก.พ. 69','52/60 ว'],
-['Customer Service','TVP-Ez · CS','รับเข้าแล้ว','green','28 เม.ย. 69','28/45 ว'],
-['พนง.รับรถผู้บริหาร','TVP · ธุรการ','รับเข้าแล้ว','green','15 ก.พ. 69','18/45 ว']
-],
-'rec-gem':[
-['Head of BIZ NEX','BIZ NEX · Management','รับเข้าแล้ว','green','5 เม.ย. 69','60/90 ว'],
-['Lead Specialist (LAC-RA)','LAC-RA · Management','รับเข้าแล้ว','green','12 เม.ย. 69','45/60 ว'],
-['Digital Transformation Lead','TVP · Strategy','รับเข้าแล้ว','green','20 มี.ค. 69','50/90 ว'],
-['PMO Manager','TVP · Strategy','ทำ Offer','orange','15 เม.ย. 69','40/90 ว']
-],
-'src-internal':[
-['Programmer','TVP · IT (Referral)','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['ที่ปรึกษาขายอีซี่คาร์','TVP-Ez · ทีม 1','รับเข้าแล้ว','green','28 ม.ค. 69','42/45 ว'],
-['HR Specialist','TVP · HR (Referral)','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['Telesales (×4)','TVP · สุขุมวิท','รับเข้าแล้ว','green','ม.ค.–ก.พ.','25/45 ว']
-],
-'src-jobthai':[
-['เจ้าหน้าที่นายหน้าประกันภัย (×3)','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','ม.ค.–ก.พ.','25/45 ว'],
-['พนง.บัญชี AP/AR','TVP · บัญชี','รับเข้าแล้ว','green','22 ม.ค. 69','30/45 ว'],
-['ที่ปรึกษาขายรถเช่า','TRP · ทีมขาย','รับเข้าแล้ว','green','15 มี.ค. 69','35/45 ว'],
-['Customer Service','TVP-Ez · CS','รอเริ่มงาน','green','28 เม.ย. 69','22/45 ว']
-],
-'src-jobsdb':[
-['Data Analyst','TVP · IT','สัมภาษณ์รอบ Manager','','10 เม.ย. 69','19/60 ว'],
-['Legal Manager','TVP · กฎหมาย','ทำ Offer','orange','15 เม.ย. 69','74/90 ว'],
-['Senior Broker','TVP · ฝ่ายนายหน้า','กำลังดำเนินการ','','10 ก.พ. 69','78/60 ว ⚠'],
-['Operations Manager','TRP · Operations','กำลังดำเนินการ','','20 มี.ค. 69','54/90 ว']
-],
-'src-agency':[
-['Digital Transformation Lead','TVP · Strategy','รับเข้าแล้ว','green','20 มี.ค. 69','50/90 ว'],
-['Head of BIZ NEX','BIZ NEX · Management','สัมภาษณ์รอบ 1','','5 เม.ย. 69','24/90 ว'],
-['AI Specialist','TVP · IT','สัมภาษณ์','','10 เม.ย. 69','19/60 ว']
-],
-'src-fb':[
-['Telesales','TVP · สุขุมวิท','รับเข้าแล้ว','green','20 ม.ค. 69','25/45 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','รับเข้าแล้ว','green','8 ก.พ. 69','24/45 ว'],
-['พนง.ขาย Used Car','TVP-Uc · ทีมขาย','รับเข้าแล้ว','green','10 ก.พ. 69','32/45 ว']
-],
-'src-jobbkk':[
-['Marketing Specialist','TVP · การตลาด','ยกเลิก','red','20 มี.ค. 69','—'],
-['แม่บ้าน','TVP · ธุรการ','รับเข้าแล้ว','green','5 มี.ค. 69','15/45 ว'],
-['PD','TVP · ธุรการ','รับเข้าแล้ว','green','10 มี.ค. 69','18/45 ว']
-],
-'src-rehire':[
-['Operations Specialist (โอนย้าย)','TRP · Operations','รับเข้าแล้ว','green','10 มี.ค. 69','30/60 ว'],
-['HR Specialist (Re-hire)','TVP · HR','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว'],
-['Lead Specialist (LAC-RA)','LAC-RA · Management','รับเข้าแล้ว','green','12 เม.ย. 69','45/60 ว']
-],
-'grp-internal':[
-['Programmer','TVP · IT (Referral)','รับเข้าแล้ว','green','20 ก.พ. 69','45/60 ว'],
-['ที่ปรึกษาขายอีซี่คาร์ (×3)','TVP-Ez · ทีม 1','รับเข้าแล้ว','green','ม.ค.–มี.ค.','30/45 ว'],
-['HR Specialist','TVP · HR (Referral)','รับเข้าแล้ว','green','1 ก.พ. 69','38/60 ว']
-],
-'grp-online':[
-['เจ้าหน้าที่นายหน้า (×3)','TVP · ฝ่ายนายหน้าฯ','รับเข้าแล้ว','green','JobThai','25/45 ว'],
-['Data Analyst','TVP · IT','สัมภาษณ์','','JobsDB','19/60 ว'],
-['Telesales','TVP · สุขุมวิท','รับเข้าแล้ว','green','Facebook','25/45 ว'],
-['แม่บ้าน','TVP · ธุรการ','รับเข้าแล้ว','green','JobBKK','15/45 ว']
-],
-'grp-agency':[
-['Digital Transformation Lead','TVP · Strategy','รับเข้าแล้ว','green','20 มี.ค. 69','50/90 ว'],
-['Head of BIZ NEX','BIZ NEX · Management','สัมภาษณ์','','5 เม.ย. 69','24/90 ว'],
-['AI Specialist','TVP · IT','สัมภาษณ์','','10 เม.ย. 69','19/60 ว']
-],
-'pend-tvp':[
-['พนักงานขายหน้าสาขา','TVP · บางนา','ค้างรับ (Re-open)','red','5 ก.พ. 69','84/45 ว ⚠'],
-['Telesales (×3)','TVP · สุขุมวิท','ค้างรับ','red','ก.พ. 69','81/45 ว ⚠'],
-['Telesales ประกันภัย (×2)','TVP · ฝ่ายนายหน้าฯ','ค้างรับ','red','มี.ค. 69','55/45 ว ⚠'],
-['พนง.บัญชี AR','TVP · บัญชี','ค้างรับ','red','15 มี.ค. 69','46/45 ว ⚠'],
-['Marketing Junior','TVP · การตลาด','ค้างรับ','yellow','20 มี.ค. 69','41/45 ว'],
-['Customer Service','TVP · CS','ค้างรับ','yellow','25 มี.ค. 69','36/45 ว'],
-['Internal Auditor','TVP · ตรวจสอบภายใน','ค้างรับ','yellow','1 เม.ย. 69','29/60 ว'],
-['IT Support','TVP · IT','ค้างรับ','yellow','10 เม.ย. 69','20/45 ว']
-],
-'pend-ez':[
-['พนง.ตรวจสภาพรถ','TVP-Ez · Operations','ค้างรับ','red','20 ก.พ. 69','69/45 ว ⚠'],
-['ที่ปรึกษาขายอีซี่คาร์ (Flexi)','TVP-Ez · Flexi','ค้างรับ','red','12 ก.พ. 69','77/45 ว ⚠'],
-['ที่ปรึกษาขายอีซี่คาร์ (ทีม 1)','TVP-Ez · ทีม 1','ค้างรับ','yellow','10 เม.ย. 69','19/45 ว'],
-['พนง.รับรถ (×2)','TVP-Ez · Operations','ค้างรับ','yellow','มี.ค. 69','40/45 ว'],
-['CS อีซี่คาร์','TVP-Ez · CS','ค้างรับ','yellow','15 เม.ย. 69','14/45 ว'],
-['ช่างยนต์','TVP-Ez · ซ่อมบำรุง','ค้างรับ','yellow','20 เม.ย. 69','9/60 ว']
-],
-'pend-trp':[
-['Fleet Specialist','TRP · Fleet','ค้างรับ','yellow','1 มี.ค. 69','60/60 ว'],
-['Operations Specialist','TRP · Operations','ค้างรับ','yellow','15 เม.ย. 69','14/60 ว']
-],
-'pend-uc':[['พนง.บัญชี (Used Car)','TVP-Uc · บัญชี','ค้างรับ','yellow','15 มี.ค. 69','46/45 ว ⚠']]
-},
-'2568': {
-'kpi-total':[['ที่ปรึกษาขายอีซี่คาร์ (×8)','TVP-Ez · ทีม 1/Flexi','รับเข้าแล้ว','green','มิ.ย. 68','30/45 ว'],['Telesales (×12)','TVP · สุขุมวิท','รับเข้าแล้ว','green','พ.ค.–ก.ค.','28/45 ว'],['HR Manager','TVP · HR','รับเข้าแล้ว','green','1 พ.ค. 68','85/90 ว'],['Operations Manager (รถเช่า)','TRP · Operations','ค้างรับ','red','15 ก.ค. 68','92/90 ว ⚠'],['Data Analyst','TVP · IT','รับเข้าแล้ว','green','20 มิ.ย. 68','50/60 ว']],
-'kpi-hired':[['ที่ปรึกษาขายอีซี่คาร์ (×24)','TVP-Ez','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว'],['Telesales (×30)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','26/45 ว'],['Customer Service (×15)','TVP-Ez · CS','รับเข้าแล้ว','green','พ.ค.–ส.ค.','24/45 ว'],['Fleet Specialist (×8)','TRP · Fleet','รับเข้าแล้ว','green','มิ.ย. 68','52/60 ว'],['Programmer (×4)','TVP · IT','รับเข้าแล้ว','green','ก.ค. 68','48/60 ว'],['HR Manager','TVP · HR','รับเข้าแล้ว','green','1 พ.ค. 68','85/90 ว']],
-'kpi-wip':[['Senior Developer','TVP · IT','สัมภาษณ์','','15 ส.ค. 68','15/60 ว'],['Data Engineer','TVP · IT','รอ Screening','','20 ส.ค. 68','11/60 ว'],['Marketing Manager','TVP · การตลาด','ทำ Offer','orange','10 ส.ค. 68','21/90 ว']],
-'kpi-pending':[['Operations Manager (รถเช่า)','TRP · Operations','ค้างรับ','red','15 ก.ค. 68','92/90 ว ⚠'],['Senior Broker','TVP · ฝ่ายนายหน้า','ค้างรับ','yellow','1 ส.ค. 68','35/60 ว'],['CPA Accountant','TVP · บัญชี','ค้างรับ','yellow','10 ส.ค. 68','22/60 ว'],['IT Security','TVP · IT','ค้างรับ','yellow','15 ส.ค. 68','17/60 ว']],
-'kpi-days':[['ทั้งปีเฉลี่ย Time-to-Hire','รวมทั้ง 198 ตำแหน่ง','รับเข้าแล้ว','green','พ.ค.–ส.ค. 68','32 วัน เฉลี่ย']],
-'status-hired':[['ที่ปรึกษาขายอีซี่คาร์ (×24)','TVP-Ez','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว'],['Telesales (×30)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','26/45 ว']],
-'status-wip':[['Senior Developer','TVP · IT','สัมภาษณ์','','15 ส.ค. 68','15/60 ว']],
-'status-pending':[['Operations Manager (รถเช่า)','TRP','ค้างรับ','red','15 ก.ค. 68','92/90 ว ⚠']],
-'status-cancel':[['Junior Marketing','TVP · การตลาด','ยกเลิก','red','พ.ค. 68','—']],
-'month-jan':[['สรุปเดือน พ.ค. 68','รวม 22 อัตรา','—','','พ.ค. 68','—']],
-'month-feb':[['สรุปเดือน มิ.ย. 68','รวม 18 อัตรา','—','','มิ.ย. 68','—']],
-'month-mar':[['สรุปเดือน ก.ค. 68','รวม 15 อัตรา','—','','ก.ค. 68','—']],
-'month-apr':[['สรุปเดือน ส.ค. 68','รวม 30 อัตรา','—','','ส.ค. 68','—']],
-'sla':[['ปฏิบัติการ (เฉลี่ย)','ทุก BU','✓ ภายใน','green','ปี 2568','28/45 ว'],['ผู้เชี่ยวชาญ (เฉลี่ย)','IT/บัญชี','✓ ภายใน','green','ปี 2568','48/60 ว'],['ผู้จัดการ (เฉลี่ย)','TVP/TRP','✓ ภายใน','green','ปี 2568','78/90 ว'],['Operations Manager','TRP','! เกิน SLA','red','ก.ค. 68','92/90 ว ⚠']],
-'job-permanent':[['ที่ปรึกษาขายอีซี่คาร์ (×24)','TVP-Ez','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว'],['Telesales (×30)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','26/45 ว'],['HR Manager','TVP · HR','รับเข้าแล้ว','green','1 พ.ค. 68','85/90 ว']],
-'job-temporary':[['Customer Service (Peak)','TVP-Ez','รับเข้าแล้ว','green','พ.ค. 68','20/45 ว']],
-'rep-resign':[['Telesales (×30)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','26/45 ว']],
-'rep-budget':[['HR Manager','TVP · HR','รับเข้าแล้ว','green','1 พ.ค. 68','85/90 ว']],
-'rep-restruct-extra':[['Digital Lead','TVP · Strategy','รับเข้าแล้ว','green','15 มิ.ย. 68','82/90 ว']],
-'rep-restruct':[['BIZ NEX Team','BIZ NEX','รับเข้าแล้ว','green','พ.ค. 68','55/60 ว']],
-'rep-transfer':[['Operations Specialist','TRP (Transfer)','รับเข้าแล้ว','green','มิ.ย. 68','30/60 ว']],
-'dept-insur':[['เจ้าหน้าที่นายหน้า (×28)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','28/45 ว']],
-'dept-acct':[['พนง.บัญชี AP/AR (×18)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','32/45 ว'],['CPA Accountant','TVP','ค้างรับ','yellow','10 ส.ค. 68','22/60 ว']],
-'dept-ezt1':[['ที่ปรึกษาขายอีซี่คาร์ (×32)','TVP-Ez · ทีม 1','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว']],
-'dept-short':[['Telesales สุขุมวิท (×15)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','26/45 ว']],
-'dept-flexi':[['ที่ปรึกษาขายอีซี่คาร์ Flexi (×18)','TVP-Ez · Flexi','รับเข้าแล้ว','green','พ.ค.–ส.ค.','28/45 ว']],
-'bu-tvp':[['Telesales (×30)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','26/45 ว'],['เจ้าหน้าที่นายหน้า (×28)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','28/45 ว'],['HR Manager','TVP · HR','รับเข้าแล้ว','green','1 พ.ค. 68','85/90 ว'],['Senior Broker','TVP · ฝ่ายนายหน้า','ค้างรับ','yellow','1 ส.ค. 68','35/60 ว']],
-'bu-trp':[['Fleet Specialist (×8)','TRP · Fleet','รับเข้าแล้ว','green','มิ.ย. 68','52/60 ว'],['ที่ปรึกษาขายรถเช่า (×12)','TRP','รับเข้าแล้ว','green','พ.ค.–ก.ค.','35/45 ว'],['Operations Manager','TRP','ค้างรับ','red','15 ก.ค. 68','92/90 ว ⚠']],
-'bu-ez':[['ที่ปรึกษาขายอีซี่คาร์ (×24)','TVP-Ez','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว'],['Customer Service (×8)','TVP-Ez · CS','รับเข้าแล้ว','green','มิ.ย.–ส.ค.','24/45 ว']],
-'bu-uc':[['พนง.ขาย Used Car (×10)','TVP-Uc · ทีมขาย','รับเข้าแล้ว','green','พ.ค.–ส.ค.','32/45 ว']],
-'bu-lac':[['Lead Specialist (LAC-RA)','LAC-RA','รับเข้าแล้ว','green','15 ก.ค. 68','50/60 ว']],
-'bu-biz':[['Head of BIZ NEX','BIZ NEX','รับเข้าแล้ว','green','15 มิ.ย. 68','75/90 ว']],
-'rec-fluke':[['Telesales + นายหน้า (×56)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','27/45 ว']],
-'rec-poj':[['ที่ปรึกษาขาย + Fleet (×38)','TVP-Ez/TRP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','35/45 ว']],
-'rec-jom':[['บัญชี + Operations (×42)','TVP/TVP-Uc','รับเข้าแล้ว','green','พ.ค.–ส.ค.','32/45 ว']],
-'rec-nay':[['Management + Senior (×36)','TVP/TRP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','55/90 ว']],
-'rec-gem':[['Specialist + Lead (×26)','TVP/BIZ NEX','รับเข้าแล้ว','green','พ.ค.–ส.ค.','48/60 ว']],
-'src-internal':[['Programmer (×8)','TVP · IT (Referral)','รับเข้าแล้ว','green','พ.ค.–ส.ค.','45/60 ว']],
-'src-jobthai':[['Telesales (×20)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','27/45 ว']],
-'src-jobsdb':[['Senior IT/บัญชี (×15)','TVP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','50/60 ว']],
-'src-agency':[['Manager+ (×6)','TVP/TRP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','75/90 ว']],
-'src-fb':[['Telesales/CS (×12)','TVP/TVP-Ez','รับเข้าแล้ว','green','พ.ค.–ส.ค.','24/45 ว']],
-'src-jobbkk':[['Operations (×8)','TVP/TVP-Uc','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว']],
-'src-rehire':[['Specialist + Lead (×8)','ทุก BU','รับเข้าแล้ว','green','พ.ค.–ส.ค.','45/60 ว']],
-'grp-internal':[['รวม Internal Referral (×35)','ทุก BU','รับเข้าแล้ว','green','พ.ค.–ส.ค.','30/45 ว']],
-'grp-online':[['รวม Online (×111)','ทุก BU','รับเข้าแล้ว','green','พ.ค.–ส.ค.','28/45 ว']],
-'grp-agency':[['รวม Agency (×18)','TVP/TRP','รับเข้าแล้ว','green','พ.ค.–ส.ค.','75/90 ว']],
-'pend-tvp':[['Senior Broker','TVP','ค้างรับ','yellow','1 ส.ค. 68','35/60 ว'],['CPA Accountant','TVP','ค้างรับ','yellow','10 ส.ค. 68','22/60 ว'],['IT Security','TVP','ค้างรับ','yellow','15 ส.ค. 68','17/60 ว']],
-'pend-ez':[['ที่ปรึกษาขายอีซี่คาร์ (×3)','TVP-Ez','ค้างรับ','yellow','ส.ค. 68','25/45 ว']],
-'pend-trp':[['Operations Manager (รถเช่า)','TRP','ค้างรับ','red','15 ก.ค. 68','92/90 ว ⚠']],
-'pend-uc':[]
-},
-'2567': {
-'kpi-total':[['สรุปทั้งปี 2567','รวม 312 ตำแหน่ง · 245 รับเข้า','รับเข้าส่วนใหญ่','green','พ.ค. 67 – ส.ค. 67','เฉลี่ย 35 วัน']],
-'kpi-hired':[['รวมรับเข้าทั้งปี 245 ราย','กระจายทุก BU','รับเข้าแล้ว','green','ปี 2567','35 วัน เฉลี่ย']],
-'kpi-wip':[['Senior Manager','TVP','สัมภาษณ์รอบสุดท้าย','','15 ส.ค. 67','15/90 ว'],['Specialist','TVP-Ez','ทำ Offer','orange','20 ส.ค. 67','10/60 ว']],
-'kpi-pending':[['Specialist รถเช่า','TRP · Fleet','ค้างรับ','yellow','1 ส.ค. 67','35/60 ว'],['IT Auditor','TVP · IT','ค้างรับ','yellow','10 ส.ค. 67','22/60 ว']],
-'kpi-days':[['เฉลี่ยทั้งปี 35 วัน','ทุก BU','รับเข้า','green','ปี 2567','35 วัน']],
-'status-hired':[['รวม 245 ตำแหน่ง','ทุก BU','รับเข้าแล้ว','green','ปี 2567','35 วัน เฉลี่ย']],
-'status-wip':[['Senior Manager','TVP','สัมภาษณ์','','ส.ค. 67','15/90 ว']],
-'status-pending':[['Specialist รถเช่า','TRP','ค้างรับ','yellow','ส.ค. 67','35/60 ว']],
-'status-cancel':[['Marketing Junior (×8)','TVP','ยกเลิก','red','ก.ค. 67','—']],
-'month-jan':[['ปี 2567 มิ.ย.','รวม 28 อัตรา','—','','มิ.ย. 67','—']],
-'month-feb':[['ปี 2567 ก.ค.','รวม 25 อัตรา','—','','ก.ค. 67','—']],
-'month-mar':[['ปี 2567 ส.ค.','รวม 40 อัตรา','—','','ส.ค. 67','—']],
-'month-apr':[['ปี 2567 พ.ค.','รวม 32 อัตรา','—','','พ.ค. 67','—']],
-'sla':[['สรุปทั้งปี: 78% SLA','193 ภายใน / 54 เกิน','—','green','ปี 2567','78%']],
-'job-permanent':[['Permanent ทั้งหมด 220 ราย','ทุก BU','รับเข้าแล้ว','green','ปี 2567','35 วัน']],
-'job-temporary':[['Temporary 32 ราย','TVP/TVP-Ez','รับเข้าแล้ว','green','ปี 2567','25 วัน']],
-'rep-resign':[['ทดแทนลาออก 142 ราย','ทุก BU','รับเข้าแล้ว','green','ปี 2567','35 วัน']],
-'rep-budget':[['ตามแผน 78 ราย','TVP/TRP','รับเข้าแล้ว','green','ปี 2567','40 วัน']],
-'rep-restruct-extra':[['โครงสร้างใหม่นอกแผน 15 ราย','TVP','รับเข้าแล้ว','green','ปี 2567','60 วัน']],
-'rep-restruct':[['โครงสร้างใหม่ 10 ราย','BIZ NEX/LAC','รับเข้าแล้ว','green','ปี 2567','55 วัน']],
-'rep-transfer':[['ทดแทนโอนย้าย 7 ราย','TRP/TVP','รับเข้าแล้ว','green','ปี 2567','30 วัน']],
-'dept-insur':[['ฝ่ายนายหน้าฯ 32 ราย','TVP','รับเข้าแล้ว','green','ปี 2567','28 วัน']],
-'dept-acct':[['ส่วนงานบัญชี 25 ราย','TVP','รับเข้าแล้ว','green','ปี 2567','32 วัน']],
-'dept-ezt1':[['ฝ่ายขายอีซี่คาร์ 38 ราย','TVP-Ez','รับเข้าแล้ว','green','ปี 2567','28 วัน']],
-'dept-short':[['ขายบุคคลระยะสั้น 18 ราย','TVP','รับเข้าแล้ว','green','ปี 2567','26 วัน']],
-'dept-flexi':[['อีซี่คาร์ Flexi 20 ราย','TVP-Ez','รับเข้าแล้ว','green','ปี 2567','27 วัน']],
-'bu-tvp':[['TVP รวม 165 ตำแหน่ง','ทุกฝ่าย','รับเข้าแล้ว','green','ปี 2567','35 วัน']],
-'bu-trp':[['TRP รวม 42 ตำแหน่ง','ทุกฝ่าย','รับเข้าแล้ว','green','ปี 2567','42 วัน']],
-'bu-ez':[['TVP-Ez รวม 33 ตำแหน่ง','ทุกฝ่าย','รับเข้าแล้ว','green','ปี 2567','28 วัน']],
-'bu-uc':[['TVP-Uc รวม 8 ตำแหน่ง','ทุกฝ่าย','รับเข้าแล้ว','green','ปี 2567','32 วัน']],
-'bu-lac':[['LAC-RA รวม 3 ตำแหน่ง','ทุกฝ่าย','รับเข้าแล้ว','green','ปี 2567','50 วัน']],
-'bu-biz':[['BIZ NEX 1 ตำแหน่ง','Management','รับเข้าแล้ว','green','ปี 2567','85 วัน']],
-'rec-fluke':[['ฟลุ๊ค สรรหา 78 ราย','ส่วนใหญ่ TVP','รับเข้า','green','ปี 2567','30 วัน']],
-'rec-poj':[['พจน์ สรรหา 60 ราย','TVP/TRP','รับเข้า','green','ปี 2567','45 วัน']],
-'rec-jom':[['จ๋อมแจ๋ม สรรหา 52 ราย','TVP/TVP-Uc','รับเข้า','green','ปี 2567','35 วัน']],
-'rec-nay':[['เน สรรหา 42 ราย','TRP/TVP-Ez','รับเข้า','green','ปี 2567','40 วัน']],
-'rec-gem':[['เจม สรรหา 33 ราย','TVP/BIZ NEX','รับเข้า','green','ปี 2567','55 วัน']],
-'src-internal':[['Internal Referral 72 ราย','ทุก BU','รับเข้าแล้ว','green','ปี 2567','30 วัน']],
-'src-jobthai':[['JobThai 55 ราย','TVP/TVP-Ez','รับเข้าแล้ว','green','ปี 2567','28 วัน']],
-'src-jobsdb':[['JobsDB 40 ราย','TVP IT/บัญชี','รับเข้าแล้ว','green','ปี 2567','50 วัน']],
-'src-agency':[['Agency 25 ราย','TVP/TRP Manager','รับเข้าแล้ว','green','ปี 2567','75 วัน']],
-'src-fb':[['Facebook 28 ราย','TVP-Ez/TVP','รับเข้าแล้ว','green','ปี 2567','25 วัน']],
-'src-jobbkk':[['JobBKK 15 ราย','TVP/ธุรการ','รับเข้าแล้ว','green','ปี 2567','22 วัน']],
-'src-rehire':[['Re-hire 10 ราย','ทุก BU','รับเข้าแล้ว','green','ปี 2567','40 วัน']],
-'grp-internal':[['รวม Internal 82 ราย','ทุก BU','รับเข้า','green','ปี 2567','30 วัน']],
-'grp-online':[['รวม Online 138 ราย','ทุก BU','รับเข้า','green','ปี 2567','28 วัน']],
-'grp-agency':[['รวม Agency 25 ราย','TVP/TRP','รับเข้า','green','ปี 2567','75 วัน']],
-'pend-tvp':[['Specialist (×3)','TVP','ค้างรับ','yellow','ส.ค. 67','25/60 ว']],
-'pend-ez':[['Customer Service','TVP-Ez','ค้างรับ','yellow','ส.ค. 67','18/45 ว']],
-'pend-trp':[['Fleet Specialist','TRP','ค้างรับ','yellow','ส.ค. 67','20/60 ว']],
-'pend-uc':[]
+'kpi-total':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว']],
+'kpi-hired':[['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว']],
+'kpi-wip':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว']],
+'kpi-pending':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว']],
+'kpi-days':[['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว'],['เจ้าหน้าที่บัญชี (ด้านเจ้าหนี้ AP)','TRP · ส่วนบัญชี-ด้าน AP เจ้าหนี้','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่บัญชี (ด้านลูกหนี้)','TRP · ส่วนบัญชี-ด้านบัญชีลูกหนี้','รับเข้าทำงาน','green','—','23/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','22/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','12/45 ว']],
+'status-hired':[['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว']],
+'status-wip':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว']],
+'status-pending':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว']],
+'status-cancel':[['เจ้าหน้าที่ขายประกันภัย','TVP · ฝ่ายนายหน้าประกันภัย','ค้างรับ (เกิน SLA)','red','—','—'],['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['ประสานงานขาย','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','—'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','ชะลอ/ยกเลิก','red','—','—'],['Senior Rental Service Officer','TVP-Ez · ขายบุคคลระยะสั้น','ชะลอ/ยกเลิก','red','—','—'],['ผู้จัดการส่วนงานการเงิน','TVP · ส่วนงานการเงิน','ค้างรับ','yellow','—','—'],['เจ้าหน้าที่การเงิน','TVP · ส่วนงานการเงิน','ค้างรับ','yellow','—','—'],['เจ้าหน้าที่พิจารณาสินเชื่อ','TVP · ฝ่ายพิจารณาสินเชื่อ','ชะลอ/ยกเลิก','red','—','—'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ (เกิน SLA)','red','—','—'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','สละสิทธิ์','red','—','—']],
+'month-jan':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['เจ้าหน้าที่ขายประกันภัย','TVP · ฝ่ายนายหน้าประกันภัย','ค้างรับ (เกิน SLA)','red','—','—'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว']],
+'month-feb':[['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Strategic Partnerships & BD.','TVP · บิซโบรคเกอร์','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['Vehical Service Agent(VSA)','TVP-Ez · ขายบุคคลระยะสั้น สาขาอุดร','รับเข้าทำงาน','green','—','30/45 ว'],['ผู้จัดการส่วนงานการเงิน','TVP · ส่วนงานการเงิน','ค้างรับ','yellow','—','—']],
+'month-mar':[['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม B','TVP · ขายทีม B','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['Part Time','BIZ NEX','อยู่ระหว่างสรรหา','','—','SLA 45 ว'],['Senior Rental Service Officer','TVP-Ez · ขายบุคคลระยะสั้น','ชะลอ/ยกเลิก','red','—','—'],['เจ้าหน้าที่พิจารณาสินเชื่อ','TVP · ฝ่ายพิจารณาสินเชื่อ','ชะลอ/ยกเลิก','red','—','—'],['ธุรการบัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','2/45 ว'],['เจ้าหน้าที่บริหารเครือข่ายและความสัมพันธ์ลูกค้าองค์กร','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','43/45 ว'],['เจ้าหน้าที่บัญชีอาวุโส (ด้านจ่ายค่าใช้จ่าย)','TRP · ส่วนบัญชี-ด้านจ่ายค่าใช้จ่าย','รับเข้าทำงาน','green','—','9/60 ว'],['พนักงานขับรถผู้บริหาร','TRP · สำนักบริหาร','ค้างรับ (เกิน SLA)','red','—','53/45 ว ⚠']],
+'month-apr':[['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 23 ว'],['IT Infrastructure Officer','TVP · เทคโนโลยีสารสนเทศ','อยู่ระหว่างสรรหา','','—','เหลือ 39 ว'],['Sale','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['Sale','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['ผู้เชี่ยวชาญด้านกราฟิกดีไซน์','TVP · ฝ่ายการตลาดอีซี่คาร์','อยู่ระหว่างสรรหา','','—','เหลือ 49 ว'],['เลขานุการบริหาร','TRP · สำนักกรรมการ','อยู่ระหว่างสรรหา','','—','เหลือ 90 ว'],['Sale Manager','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 90 ว'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['พนักงานปฏิบัติการรถเช่า','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','รับเข้าทำงาน','green','—','1/45 ว']],
+'month-may':[['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','เจรจาค่าจ้าง/อยู่ระหว่างจัดรับ','orange','—','เหลือ 41 ว'],['เจ้าหน้าที่พัฒนาธุรกิจ','TVP · ขายบุคคลระยะสั้น สาทร','อยู่ระหว่างส่งประวัติ','','—','เหลือ 45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','5/45 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP · ขายทีม D','สละสิทธิ์','red','—','—'],['พนักงานงาน PDI','TVP · ฝ่ายซ่อมบำรุง','รับเข้าทำงาน','green','—','SLA 45 ว']],
+'sla':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว']],
+'job-permanent':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว']],
+'job-temporary':[['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','เจรจาค่าจ้าง/อยู่ระหว่างจัดรับ','orange','—','เหลือ 41 ว'],['Part Time','BIZ NEX','อยู่ระหว่างสรรหา','','—','SLA 45 ว'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['พนักงานขับรถ(Driver)','TVP · ขายราชการ','รับเข้าทำงาน','green','—','37/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','40/45 ว'],['ที่ปรึกษาการขาย (SCX)','TVP-Uc · ขายรถยนต์มือสอง-ทีม1','รับเข้าทำงาน','green','—','SLA 45 ว'],['เจ้าหน้าที่ธุรการ','TVP · ฝ่ายประกันภัยรถยนต์','รับเข้าทำงาน','green','—','4/45 ว'],['เจ้าหน้าที่พิจารณาสินเชื่อ','TVP · ฝ่ายพิจารณาสินเชื่อ','ชะลอ/ยกเลิก','red','—','—'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','14/45 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ (เกิน SLA)','red','—','—']],
+'rep-resign':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 23 ว'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['IT Infrastructure Officer','TVP · เทคโนโลยีสารสนเทศ','อยู่ระหว่างสรรหา','','—','เหลือ 39 ว']],
+'rep-budget':[['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Strategic Partnerships & BD.','TVP · บิซโบรคเกอร์','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม B','TVP · ขายทีม B','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['Sale','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['Sale','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['เจ้าหน้าที่พัฒนาธุรกิจ','TVP · ขายบุคคลระยะสั้น สาทร','อยู่ระหว่างส่งประวัติ','','—','เหลือ 45 ว']],
+'rep-restruct-extra':[['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','เจรจาค่าจ้าง/อยู่ระหว่างจัดรับ','orange','—','เหลือ 41 ว'],['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','22/45 ว'],['เจ้าหน้าที่พิจารณาสินเชื่อ','TVP · ฝ่ายพิจารณาสินเชื่อ','ชะลอ/ยกเลิก','red','—','—'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','14/45 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ (เกิน SLA)','red','—','—'],['ธุรการบัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','2/45 ว']],
+'rep-restruct':[['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠']],
+'rep-transfer':[['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว']],
+'dept-insur':[['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['เจ้าหน้าที่ขายประกันภัย','TVP · ฝ่ายนายหน้าประกันภัย','ค้างรับ (เกิน SLA)','red','—','—'],['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','40/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','21/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','5/45 ว']],
+'dept-acct':[['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP-Uc · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','25/45 ว'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','14/45 ว'],['ธุรการบัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','2/45 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','30/60 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','18/45 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','3/45 ว']],
+'dept-ezt1':[['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['ประสานงานขาย','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','—']],
+'dept-short':[['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','เจรจาค่าจ้าง/อยู่ระหว่างจัดรับ','orange','—','เหลือ 41 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ (เกิน SLA)','red','—','—'],['เจ้าหน้าที่บริหารเครือข่ายและความสัมพันธ์ลูกค้าองค์กร','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','43/45 ว'],['พนักงานงาน PDI','TVP · ฝ่ายซ่อมบำรุง','รับเข้าทำงาน','green','—','SLA 45 ว']],
+'dept-flexi':[['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 23 ว'],['พนักงานปฏิบัติการรถเช่า','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','รับเข้าทำงาน','green','—','1/45 ว']],
+'bu-tvp':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 23 ว'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['IT Infrastructure Officer','TVP · เทคโนโลยีสารสนเทศ','อยู่ระหว่างสรรหา','','—','เหลือ 39 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','เจรจาค่าจ้าง/อยู่ระหว่างจัดรับ','orange','—','เหลือ 41 ว']],
+'bu-trp':[['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['เลขานุการบริหาร','TRP · สำนักกรรมการ','อยู่ระหว่างสรรหา','','—','เหลือ 90 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว'],['เจ้าหน้าที่บัญชี (ด้านเจ้าหนี้ AP)','TRP · ส่วนบัญชี-ด้าน AP เจ้าหนี้','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่บัญชี (ด้านลูกหนี้)','TRP · ส่วนบัญชี-ด้านบัญชีลูกหนี้','รับเข้าทำงาน','green','—','23/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','22/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','ชะลอ/ยกเลิก','red','—','—'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','12/45 ว'],['เจ้าหน้าที่บัญชีอาวุโส (ด้านจ่ายค่าใช้จ่าย)','TRP · ส่วนบัญชี-ด้านจ่ายค่าใช้จ่าย','รับเข้าทำงาน','green','—','9/60 ว'],['พนักงานขับรถผู้บริหาร','TRP · สำนักบริหาร','ค้างรับ (เกิน SLA)','red','—','53/45 ว ⚠']],
+'bu-ez':[['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['ประสานงานขาย','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','—'],['Vehical Service Agent(VSA)','TVP-Ez · ขายบุคคลระยะสั้น สาขาอุดร','รับเข้าทำงาน','green','—','30/45 ว'],['Senior Rental Service Officer','TVP-Ez · ขายบุคคลระยะสั้น','ชะลอ/ยกเลิก','red','—','—'],['พนักงานปฏิบัติการรถเช่า','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','รับเข้าทำงาน','green','—','1/45 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','สละสิทธิ์','red','—','—']],
+'bu-uc':[['เจ้าหน้าที่จัดซื้อ','TVP-Uc · ส่วนจัดซื้อ จัดจ้าง','ค้างรับ (เกิน SLA)','red','—','87/45 ว ⚠'],['ที่ปรึกษาการขาย (SCX)','TVP-Uc · ขายรถยนต์มือสอง-ทีม1','รับเข้าทำงาน','green','—','SLA 45 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP-Uc · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','25/45 ว']],
+'bu-lac':[['ที่ปรึกษาการขาย (SC)','LAC-RA · ขายทีม A','รับเข้าทำงาน','green','—','17/45 ว']],
+'bu-biz':[['Part Time','BIZ NEX','อยู่ระหว่างสรรหา','','—','SLA 45 ว']],
+'rec-fluke':[['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['IT Infrastructure Officer','TVP · เทคโนโลยีสารสนเทศ','อยู่ระหว่างสรรหา','','—','เหลือ 39 ว'],['Strategic Partnerships & BD.','TVP · บิซโบรคเกอร์','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['เลขานุการบริหาร','TRP · สำนักกรรมการ','อยู่ระหว่างสรรหา','','—','เหลือ 90 ว'],['Part Time','BIZ NEX','อยู่ระหว่างสรรหา','','—','SLA 45 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว']],
+'rec-poj':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 16 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','อยู่ระหว่างสรรหา','','—','เหลือ 23 ว'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Sale','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['Sale','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['เจ้าหน้าที่พัฒนาธุรกิจ','TVP · ขายบุคคลระยะสั้น สาทร','อยู่ระหว่างส่งประวัติ','','—','เหลือ 45 ว'],['ผู้เชี่ยวชาญด้านกราฟิกดีไซน์','TVP · ฝ่ายการตลาดอีซี่คาร์','อยู่ระหว่างสรรหา','','—','เหลือ 49 ว'],['Sale Manager','TVP','อยู่ระหว่างสรรหา','','—','เหลือ 90 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠']],
+'rec-jom':[['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','เจรจาค่าจ้าง/อยู่ระหว่างจัดรับ','orange','—','เหลือ 41 ว'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม B','TVP · ขายทีม B','อยู่ระหว่างสรรหา','','—','เหลือ 45 ว'],['เจ้าหน้าที่ขายประกันภัย','TVP · ฝ่ายนายหน้าประกันภัย','ค้างรับ (เกิน SLA)','red','—','—'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['Vehical Service Agent(VSA)','TVP-Ez · ขายบุคคลระยะสั้น สาขาอุดร','รับเข้าทำงาน','green','—','30/45 ว'],['Senior Rental Service Officer','TVP-Ez · ขายบุคคลระยะสั้น','ชะลอ/ยกเลิก','red','—','—'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม A','TVP · ขายทีม A','ค้างรับ (เกิน SLA)','red','—','83/45 ว ⚠']],
+'rec-nay':[['เจ้าหน้าที่ธุรการ','TVP · ฝ่ายประกันภัยรถยนต์','รับเข้าทำงาน','green','—','4/45 ว'],['เจ้าหน้าที่ธุรการ','TVP · ส่วนงานทะเบียน','รับเข้าทำงาน','green','—','9/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','21/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['ที่ปรึกษาการขาย (SC)','TVP · ขายรถยนต์มือสอง-ทีม2','รับเข้าทำงาน','green','—','12/45 ว']],
+'rec-gem':[['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['พนักงานขับรถ(Driver)','TVP · ขายราชการ','รับเข้าทำงาน','green','—','37/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','40/45 ว'],['ที่ปรึกษาการขาย (SCX)','TVP-Uc · ขายรถยนต์มือสอง-ทีม1','รับเข้าทำงาน','green','—','SLA 45 ว']],
+'src-internal':[['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['Vehical Service Agent(VSA)','TVP-Ez · ขายบุคคลระยะสั้น สาขาอุดร','รับเข้าทำงาน','green','—','30/45 ว'],['พนักงานขับรถ(Driver)','TVP · ขายราชการ','รับเข้าทำงาน','green','—','37/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','21/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['ที่ปรึกษาการขาย (SC)','TVP · ขายรถยนต์มือสอง-ทีม2','รับเข้าทำงาน','green','—','33/45 ว']],
+'src-jobthai':[['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['เจ้าหน้าที่บัญชี (ด้านเจ้าหนี้ AP)','TRP · ส่วนบัญชี-ด้าน AP เจ้าหนี้','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่บัญชี (ด้านลูกหนี้)','TRP · ส่วนบัญชี-ด้านบัญชีลูกหนี้','รับเข้าทำงาน','green','—','23/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','22/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','12/45 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP-Uc · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','25/45 ว'],['เจ้าหน้าที่บริหารเครือข่ายและความสัมพันธ์ลูกค้าองค์กร','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','43/45 ว'],['ที่ปรึกษาการขาย (SC)','LAC-RA · ขายทีม A','รับเข้าทำงาน','green','—','17/45 ว'],['พนักงานขับรถผู้บริหาร','TRP · สำนักบริหาร','ค้างรับ (เกิน SLA)','red','—','53/45 ว ⚠']],
+'src-jobsdb':[['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['เจ้าหน้าที่จัดซื้อ','TVP-Uc · ส่วนจัดซื้อ จัดจ้าง','ค้างรับ (เกิน SLA)','red','—','87/45 ว ⚠'],['เจ้าหน้าที่พัฒนาระบบ','TVP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','13/60 ว'],['เลขานุการบริหาร','TRP · สำนักกรรมการ','รับเข้าทำงาน','green','—','4/90 ว'],['เจ้าหน้าที่บัญชี(อาวุโส)','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','3/45 ว']],
+'src-agency':[['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['ผู้อำนวยการฝ่ายการตลาด','TVP · ฝ่ายการตลาดอีซี่คาร์','รับเข้าทำงาน','green','—','5/90 ว']],
+'src-fb':[['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','40/45 ว'],['เจ้าหน้าที่ธุรการ','TVP · ฝ่ายประกันภัยรถยนต์','รับเข้าทำงาน','green','—','4/45 ว'],['เจ้าหน้าที่ธุรการงานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ (เกิน SLA)','red','—','—']],
+'src-jobbkk':[['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม A','TVP · ขายทีม A','ค้างรับ (เกิน SLA)','red','—','83/45 ว ⚠'],['เจ้าหน้าที่บัญชีอาวุโส (ด้านจ่ายค่าใช้จ่าย)','TRP · ส่วนบัญชี-ด้านจ่ายค่าใช้จ่าย','รับเข้าทำงาน','green','—','9/60 ว'],['เจ้าหน้าที่ตรวจสอบภายใน','TRP · ตรวจสอบภายใน (IA)','รับเข้าทำงาน','green','—','31/45 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','สละสิทธิ์','red','—','—']],
+'src-rehire':[['IT Infrastructure Officer','TRP · เทคโนโลยีสารสนเทศ','รับเข้าทำงาน','green','—','17/60 ว'],['เจ้าหน้าที่ธุรการ','TVP · ส่วนงานทะเบียน','รับเข้าทำงาน','green','—','9/45 ว'],['ที่ปรึกษาการขาย (SC)','TVP · ขายรถยนต์มือสอง-ทีม2','รับเข้าทำงาน','green','—','12/45 ว'],['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','รับเข้าทำงาน','green','—','14/45 ว'],['ที่ปรึกษาการขาย (SCX)','TVP · ขายรถยนต์มือสอง-ทีม1','รับเข้าทำงาน','green','—','17/45 ว']],
+'grp-internal':[['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['Business Development','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['Vehical Service Agent(VSA)','TVP-Ez · ขายบุคคลระยะสั้น สาขาอุดร','รับเข้าทำงาน','green','—','30/45 ว'],['พนักงานขับรถ(Driver)','TVP · ขายราชการ','รับเข้าทำงาน','green','—','37/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','21/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','14/45 ว'],['ที่ปรึกษาการขาย (SC)','TVP · ขายรถยนต์มือสอง-ทีม2','รับเข้าทำงาน','green','—','33/45 ว']],
+'grp-online':[['เจ้าหน้าที่บัญชี','TVP · ส่วนงานบัญชี','อยู่ระหว่างสรรหา','','—','เหลือ 37 ว'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['เจ้าหน้าที่การเงิน (ด้านบริหารการเงิน)','TRP · ส่วนการเงิน-ด้านบริหารทางการเงิน','รับเข้าทำงาน','green','—','20/45 ว'],['เจ้าหน้าที่บัญชี (ด้านเจ้าหนี้ AP)','TRP · ส่วนบัญชี-ด้าน AP เจ้าหนี้','รับเข้าทำงาน','green','—','15/45 ว'],['เจ้าหน้าที่บัญชี (ด้านลูกหนี้)','TRP · ส่วนบัญชี-ด้านบัญชีลูกหนี้','รับเข้าทำงาน','green','—','23/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','22/45 ว'],['เจ้าหน้าที่ทรัพยากรบุคคล','TRP · บริหารทรัพยากรบุคคล','รับเข้าทำงาน','green','—','12/45 ว'],['Telesales','TVP · ฝ่ายนายหน้าประกันภัย','รับเข้าทำงาน','green','—','40/45 ว'],['เจ้าหน้าที่จัดซื้อ','TVP-Uc · ส่วนจัดซื้อ จัดจ้าง','ค้างรับ (เกิน SLA)','red','—','87/45 ว ⚠']],
+'grp-agency':[['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['ผู้อำนวยการฝ่ายการตลาด','TVP · ฝ่ายการตลาดอีซี่คาร์','รับเข้าทำงาน','green','—','5/90 ว']],
+'pend-tvp':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['เจ้าหน้าที่ขายประกันภัย','TVP · ฝ่ายนายหน้าประกันภัย','ค้างรับ (เกิน SLA)','red','—','—'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['ผู้จัดการส่วนงานการเงิน','TVP · ส่วนงานการเงิน','ค้างรับ','yellow','—','—'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม A','TVP · ขายทีม A','ค้างรับ (เกิน SLA)','red','—','83/45 ว ⚠']],
+'pend-ez':[['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว'],['ประสานงานขาย','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','—']],
+'pend-trp':[['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['พนักงานขับรถผู้บริหาร','TRP · สำนักบริหาร','ค้างรับ (เกิน SLA)','red','—','53/45 ว ⚠']],
+'pend-uc':[['เจ้าหน้าที่จัดซื้อ','TVP-Uc · ส่วนจัดซื้อ จัดจ้าง','ค้างรับ (เกิน SLA)','red','—','87/45 ว ⚠']],
+'pend-sla':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠']],
+'pend-tier-op':[['Business Development','TVP · ขายบุคคลระยะสั้น สุขุมวิท','ค้างรับ (เกิน SLA)','red','—','เกิน 89 ว ⚠'],['Eazy Guide','TVP-Ez · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)','ค้างรับ (เกิน SLA)','red','—','เกิน 77 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['ที่ปรึกษาการขายโครงการรถเช่า  ทีม I','TVP · ขายทีม I','ค้างรับ (เกิน SLA)','red','—','เกิน 56 ว ⚠'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','เหลือ 3 ว ⚠'],['Telesales ทีม C','TVP-Ez · ขายทีม C','ค้างรับ','yellow','—','เหลือ 8 ว'],['Eazy Guide','TVP · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ (เกิน SLA)','red','—','107/45 ว ⚠'],['เจ้าหน้าที่ลูกค้าสัมพันธ์(อาวุโส)','TVP · ขายบุคคลระยะสั้น Drivemate','ค้างรับ (เกิน SLA)','red','—','101/45 ว ⚠'],['เจ้าหน้าที่ขายประกันภัย','TVP · ฝ่ายนายหน้าประกันภัย','ค้างรับ (เกิน SLA)','red','—','—'],['ที่ปรึกษาการขายโครงการรถเช่า ทีม D','TVP-Ez · ขายทีม D','ค้างรับ (เกิน SLA)','red','—','82/45 ว ⚠'],['จนท.ขายประกันภัย(นวมินทร์)','TVP-Ez · ฝ่ายนายหน้าประกันภัย','ค้างรับ','yellow','—','—'],['ประสานงานขาย','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','—','—']],
+'pend-tier-sp':[['เจ้าหน้าที่วิเคราะห์งานซ่อม','TVP · ฝ่ายซ่อมบำรุง','ค้างรับ','yellow','—','เกิน 3 ว ⚠'],['ผู้ชำนาญการด้านการสรรหาทรัพยากรบุคคล','TVP · บริหารทรัพยากรบุคคลและธุรการ','ค้างรับ','yellow','—','8/60 ว'],['ผู้จัดการทั่วไป','TVP-Ez · ขายรถยนต์มือสอง-ทีม1','ค้างรับ','yellow','—','SLA 60 ว']],
+'pend-tier-mg':[['AI Solution Architect','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['AI Adoption Specialist / Prompt Engineer','TRP · ฝ่าย AI','ค้างรับ','yellow','—','เหลือ 6 ว ⚠'],['Head of Car Subscription','TVP-Ez · ฝ่ายขายอีซี่คาร์ (ทีม 1)','ค้างรับ','yellow','10 ก.พ. 26','8/90 ว'],['Marketing & Communication Lead','TVP · ฝ่ายการตลาดอีซี่คาร์','ค้างรับ','yellow','10 ก.พ. 26','11/90 ว'],['ผู้จัดการส่วนงานการเงิน','TVP · ส่วนงานการเงิน','ค้างรับ','yellow','—','—']]
 }
 };
 let currentYear = '2569';
@@ -1439,181 +1083,68 @@ function renderPositions(items){
   /* ----- Year data + render ----- */
   const YEAR_DATA = {
     '2569': {
-      year:'2569', asOf:'29 เม.ย. 2569',
-      total:236, hired:41, wip:28, pending:26, days:28, hiredPct:'55%',
-      statusTotal:80, cancel:11,
-      statusArrH:'154.4 147.1',
-      statusArrW:'105.5 196', statusOffW:'-154.4',
-      statusArrP:'98 203.5', statusOffP:'-259.9',
-      statusArrC:'41.4 260.1', statusOffC:'-357.9',
+      year:'รวม 2568+2569', asOf:'15 พ.ค. 2569',
+      total:86, hired:49, wip:25, pending:26, days:32, hiredPct:'57%',
+      statusTotal:112, cancel:12,
+      statusArrH:'131.9 169.6',
+      statusArrW:'67.3 234.3', statusOffW:'-132',
+      statusArrP:'70.0 231.6', statusOffP:'-199',
+      statusArrC:'32.3 269.3', statusOffC:'-269',
       m1:30, m1h:'100%', m1n:'JAN',
-      m2:17, m2h:'57%',  m2n:'FEB',
-      m3:16, m3h:'53%',  m3n:'MAR',
-      m4:17, m4h:'57%',  m4n:'APR',
-      monthAvg:20, monthTotal:80,
-      slaTotal:71, slaPct:'76%', slaWithin:54, slaOver:17, slaArr:'262.7 82.6',
-      jobPerm:68, jobTemp:12,
-      rep_resign:43, rep_resign_w:'100%',
-      rep_budget:24, rep_budget_w:'56%',
-      rep_restruct_extra:6, rep_restruct_extra_w:'14%',
+      m2:17, m2h:'57%', m2n:'FEB',
+      m3:16, m3h:'53%', m3n:'MAR',
+      m4:15, m4h:'50%', m4n:'APR',
+      m5:8, m5h:'27%', m5n:'MAY',
+      monthAvg:17, monthTotal:86,
+      slaTotal:78, slaPct:'77%', slaWithin:60, slaOver:18, slaArr:'266.1 79.5',
+      jobPerm:72, jobTemp:14,
+      rep_resign:46, rep_resign_w:'100%',
+      rep_budget:26, rep_budget_w:'57%',
+      rep_restruct_extra:7, rep_restruct_extra_w:'15%',
       rep_restruct:3, rep_restruct_w:'7%',
       rep_transfer:1, rep_transfer_w:'2%',
-      d1n:'01 · ฝ่ายนายหน้าประกันภัย', d1v:7, d1w:'100%',
-      d2n:'02 · ส่วนงานบัญชี', d2v:6, d2w:'86%',
-      d3n:'03 · อีซี่คาร์ (ทีม 1)', d3v:5, d3w:'71%',
-      d4n:'04 · บุคคลระยะสั้น สุขุมวิท', d4v:4, d4w:'57%',
-      d5n:'05 · อีซี่คาร์ (Flexi)', d5v:4, d5w:'57%',
-      bu_tvp:50, bu_tvp_w:'100%',
-      bu_trp:14, bu_trp_w:'28%',
-      bu_ez:11, bu_ez_w:'22%',
-      bu_uc:3, bu_uc_w:'6%',
+      d1n:'01 · ฝ่ายนายหน้าประกันภัย', d1v:10, d1w:'100%',
+      d2n:'02 · ส่วนงานบัญชี', d2v:7, d2w:'70%',
+      d3n:'03 · ฝ่ายขายอีซี่คาร์ (ทีม 1)', d3v:5, d3w:'50%',
+      d4n:'04 · ฝ่ายซ่อมบำรุง', d4v:5, d4w:'50%',
+      d5n:'05 · ฝ่ายขายอีซี่คาร์ (Flexi ระยะสั้น)', d5v:4, d5w:'40%',
+      bu_tvp:56, bu_tvp_w:'100%',
+      bu_trp:14, bu_trp_w:'25%',
+      bu_ez:11, bu_ez_w:'20%',
+      bu_uc:3, bu_uc_w:'5%',
       bu_lac:1, bu_lac_w:'2%',
       bu_biz:1, bu_biz_w:'2%',
-      pieArrTvp:'235.6 141.4',
-      pieArrTrp:'66 311', pieOffTrp:'-235.6',
-      pieArrEz:'51.8 325.2', pieOffEz:'-301.6',
-      pieArrUc:'14.1 363', pieOffUc:'-353.4',
-      pieArrOther:'9.4 367.6', pieOffOther:'-367.5',
-      buTvpPct:'62%', buTrpPct:'18%', buEzPct:'14%', buUcPct:'4%', buOtherPct:'2%',
-      rec_fluke_t:26, rec_fluke_h:15, rec_fluke_r:'57.7%', rec_fluke_s:'✓ 23 / 2', rec_fluke_okw:'92%', rec_fluke_overw:'8%',
-      rec_poj_t:24,   rec_poj_h:8,   rec_poj_r:'33.3%',  rec_poj_s:'! 10 / 9', rec_poj_okw:'53%',  rec_poj_overw:'47%',
-      rec_jom_t:18,   rec_jom_h:7,   rec_jom_r:'38.9%',  rec_jom_s:'! 9 / 6',  rec_jom_okw:'60%',  rec_jom_overw:'40%',
-      rec_nay_t:7,    rec_nay_h:7,   rec_nay_r:'100%',   rec_nay_s:'✓ 7 / 0',  rec_nay_okw:'100%', rec_nay_overw:'0%',
-      rec_gem_t:5,    rec_gem_h:4,   rec_gem_r:'80%',    rec_gem_s:'✓ 5 / 0',  rec_gem_okw:'100%', rec_gem_overw:'0%',
-      s_internal:14, s_internal_w:'100%',
-      s_jobthai:9, s_jobthai_w:'64%',
-      s_jobsdb:5, s_jobsdb_w:'36%',
-      s_agency:3, s_agency_w:'21%',
-      s_fb:3, s_fb_w:'21%',
-      s_jobbkk:3, s_jobbkk_w:'21%',
-      s_rehire:3, s_rehire_w:'21%',
-      srcTotal:40, srcChannels:7,
-      grp_internal:14, grp_online:20, grp_agency:3,
-      p_tvp:16, p_ez:7, p_trp:2, p_uc:1,
-      pendSlaPct:'69%', pendSlaArr:'238.5 106.8', pend_sla_within:18, pend_sla_over:8,
-      pend_tier_op:18, pend_tier_op_w:'100%', pend_tier_op_over:5,
-      pend_tier_sp:6, pend_tier_sp_w:'33%', pend_tier_sp_over:2,
-      pend_tier_mg:2, pend_tier_mg_w:'11%', pend_tier_mg_over:1
-    },
-    '2568': {
-      year:'2568', asOf:'31 ส.ค. 2568 (ปิดปี)',
-      total:285, hired:198, wip:4, pending:12, days:32, hiredPct:'92%',
-      statusTotal:228, cancel:14,
-      statusArrH:'262 39.6',
-      statusArrW:'5.3 296.3', statusOffW:'-262',
-      statusArrP:'15.9 285.7', statusOffP:'-267.3',
-      statusArrC:'18.5 283.1', statusOffC:'-283.2',
-      m1:22, m1h:'73%', m1n:'พ.ค.',
-      m2:18, m2h:'60%', m2n:'มิ.ย.',
-      m3:15, m3h:'50%', m3n:'ก.ค.',
-      m4:30, m4h:'100%', m4n:'ส.ค.',
-      monthAvg:24, monthTotal:285,
-      slaTotal:222, slaPct:'81%', slaWithin:180, slaOver:42, slaArr:'279.5 65.8',
-      jobPerm:180, jobTemp:34,
-      rep_resign:120, rep_resign_w:'100%',
-      rep_budget:75, rep_budget_w:'62%',
-      rep_restruct_extra:12, rep_restruct_extra_w:'10%',
-      rep_restruct:8, rep_restruct_w:'7%',
-      rep_transfer:5, rep_transfer_w:'4%',
-      d1n:'01 · ฝ่ายขายอีซี่คาร์ (ทีม 1)', d1v:32, d1w:'100%',
-      d2n:'02 · ฝ่ายนายหน้าประกันภัย', d2v:28, d2w:'88%',
-      d3n:'03 · ส่วนงานบัญชี', d3v:24, d3w:'75%',
-      d4n:'04 · IT', d4v:18, d4w:'56%',
-      d5n:'05 · ขายบุคคลระยะสั้น', d5v:15, d5w:'47%',
-      bu_tvp:130, bu_tvp_w:'100%',
-      bu_trp:36, bu_trp_w:'28%',
-      bu_ez:35, bu_ez_w:'27%',
-      bu_uc:10, bu_uc_w:'8%',
-      bu_lac:2, bu_lac_w:'2%',
-      bu_biz:1, bu_biz_w:'1%',
-      pieArrTvp:'229.9 147.1',
-      pieArrTrp:'63.6 313.4', pieOffTrp:'-229.9',
-      pieArrEz:'61.9 315.1', pieOffEz:'-293.5',
-      pieArrUc:'17.7 359.3', pieOffUc:'-355.4',
-      pieArrOther:'5.3 371.7', pieOffOther:'-373.1',
-      buTvpPct:'61%', buTrpPct:'17%', buEzPct:'16%', buUcPct:'5%', buOtherPct:'1%',
-      rec_fluke_t:78, rec_fluke_h:56, rec_fluke_r:'71.8%', rec_fluke_s:'✓ 70 / 8', rec_fluke_okw:'90%', rec_fluke_overw:'10%',
-      rec_poj_t:62,   rec_poj_h:38,   rec_poj_r:'61.3%',  rec_poj_s:'✓ 50 / 12', rec_poj_okw:'81%',  rec_poj_overw:'19%',
-      rec_jom_t:54,   rec_jom_h:42,   rec_jom_r:'77.8%',  rec_jom_s:'✓ 48 / 6',  rec_jom_okw:'89%',  rec_jom_overw:'11%',
-      rec_nay_t:38,   rec_nay_h:36,   rec_nay_r:'94.7%',  rec_nay_s:'✓ 36 / 2',  rec_nay_okw:'95%',  rec_nay_overw:'5%',
-      rec_gem_t:32,   rec_gem_h:26,   rec_gem_r:'81.3%',  rec_gem_s:'✓ 28 / 4',  rec_gem_okw:'88%',  rec_gem_overw:'12%',
-      s_internal:62, s_internal_w:'100%',
-      s_jobthai:45, s_jobthai_w:'73%',
-      s_jobsdb:32, s_jobsdb_w:'52%',
-      s_agency:18, s_agency_w:'29%',
-      s_fb:22, s_fb_w:'35%',
-      s_jobbkk:12, s_jobbkk_w:'19%',
-      s_rehire:8, s_rehire_w:'13%',
-      srcTotal:199, srcChannels:7,
-      grp_internal:70, grp_online:111, grp_agency:18,
-      p_tvp:8, p_ez:3, p_trp:1, p_uc:0,
-      pendSlaPct:'83%', pendSlaArr:'286.6 58.7', pend_sla_within:10, pend_sla_over:2,
-      pend_tier_op:8, pend_tier_op_w:'100%', pend_tier_op_over:1,
-      pend_tier_sp:3, pend_tier_sp_w:'37%', pend_tier_sp_over:1,
-      pend_tier_mg:1, pend_tier_mg_w:'12%', pend_tier_mg_over:0
-    },
-    '2567': {
-      year:'2567', asOf:'31 ส.ค. 2567 (ปิดปี)',
-      total:312, hired:245, wip:2, pending:5, days:35, hiredPct:'97%',
-      statusTotal:252, cancel:20,
-      statusArrH:'293.5 8.1',
-      statusArrW:'2.4 299.2', statusOffW:'-293.5',
-      statusArrP:'6 295.6', statusOffP:'-295.9',
-      statusArrC:'24 277.6', statusOffC:'-301.9',
-      m1:32, m1h:'80%', m1n:'พ.ค.',
-      m2:28, m2h:'70%', m2n:'มิ.ย.',
-      m3:25, m3h:'62%', m3n:'ก.ค.',
-      m4:40, m4h:'100%', m4n:'ส.ค.',
-      monthAvg:26, monthTotal:312,
-      slaTotal:247, slaPct:'78%', slaWithin:193, slaOver:54, slaArr:'269.1 76.3',
-      jobPerm:220, jobTemp:32,
-      rep_resign:142, rep_resign_w:'100%',
-      rep_budget:78, rep_budget_w:'55%',
-      rep_restruct_extra:15, rep_restruct_extra_w:'11%',
-      rep_restruct:10, rep_restruct_w:'7%',
-      rep_transfer:7, rep_transfer_w:'5%',
-      d1n:'01 · ฝ่ายขายอีซี่คาร์', d1v:38, d1w:'100%',
-      d2n:'02 · ฝ่ายนายหน้าประกันภัย', d2v:32, d2w:'84%',
-      d3n:'03 · ส่วนงานบัญชี', d3v:25, d3w:'66%',
-      d4n:'04 · IT', d4v:20, d4w:'53%',
-      d5n:'05 · ทีมรถเช่า', d5v:18, d5w:'47%',
-      bu_tvp:165, bu_tvp_w:'100%',
-      bu_trp:42, bu_trp_w:'25%',
-      bu_ez:33, bu_ez_w:'20%',
-      bu_uc:8, bu_uc_w:'5%',
-      bu_lac:3, bu_lac_w:'2%',
-      bu_biz:1, bu_biz_w:'1%',
-      pieArrTvp:'246.9 130.1',
-      pieArrTrp:'62.9 314.1', pieOffTrp:'-246.9',
-      pieArrEz:'49.4 327.6', pieOffEz:'-309.8',
-      pieArrUc:'11.9 365.1', pieOffUc:'-359.2',
-      pieArrOther:'6 371', pieOffOther:'-371.1',
-      buTvpPct:'65%', buTrpPct:'17%', buEzPct:'13%', buUcPct:'3%', buOtherPct:'2%',
-      rec_fluke_t:92, rec_fluke_h:78, rec_fluke_r:'84.8%', rec_fluke_s:'✓ 85 / 7', rec_fluke_okw:'92%', rec_fluke_overw:'8%',
-      rec_poj_t:75,   rec_poj_h:60,   rec_poj_r:'80.0%',  rec_poj_s:'✓ 62 / 13', rec_poj_okw:'83%',  rec_poj_overw:'17%',
-      rec_jom_t:60,   rec_jom_h:52,   rec_jom_r:'86.7%',  rec_jom_s:'✓ 55 / 5',  rec_jom_okw:'92%',  rec_jom_overw:'8%',
-      rec_nay_t:45,   rec_nay_h:42,   rec_nay_r:'93.3%',  rec_nay_s:'✓ 42 / 3',  rec_nay_okw:'93%',  rec_nay_overw:'7%',
-      rec_gem_t:40,   rec_gem_h:33,   rec_gem_r:'82.5%',  rec_gem_s:'✓ 34 / 6',  rec_gem_okw:'85%',  rec_gem_overw:'15%',
-      s_internal:72, s_internal_w:'100%',
-      s_jobthai:55, s_jobthai_w:'76%',
-      s_jobsdb:40, s_jobsdb_w:'56%',
-      s_agency:25, s_agency_w:'35%',
-      s_fb:28, s_fb_w:'39%',
-      s_jobbkk:15, s_jobbkk_w:'21%',
-      s_rehire:10, s_rehire_w:'14%',
-      srcTotal:245, srcChannels:7,
-      grp_internal:82, grp_online:138, grp_agency:25,
-      p_tvp:3, p_ez:1, p_trp:1, p_uc:0,
-      pendSlaPct:'100%', pendSlaArr:'345.4 0', pend_sla_within:5, pend_sla_over:0,
-      pend_tier_op:4, pend_tier_op_w:'100%', pend_tier_op_over:0,
-      pend_tier_sp:1, pend_tier_sp_w:'25%', pend_tier_sp_over:0,
-      pend_tier_mg:0, pend_tier_mg_w:'0%', pend_tier_mg_over:0
+      pieArrTvp:'245.5 131.5',
+      pieArrTrp:'61.4 315.6', pieOffTrp:'-245',
+      pieArrEz:'48.2 328.8', pieOffEz:'-307',
+      pieArrUc:'13.2 363.8', pieOffUc:'-355',
+      pieArrOther:'8.8 368.2', pieOffOther:'-368',
+      buTvpPct:'65%', buTrpPct:'16%', buEzPct:'13%', buUcPct:'3%', buOtherPct:'2%',
+      rec_fluke_t:27, rec_fluke_h:18, rec_fluke_r:'66.7%', rec_fluke_s:'✓ 23 / 3', rec_fluke_okw:'88%', rec_fluke_overw:'12%',
+      rec_poj_t:24, rec_poj_h:10, rec_poj_r:'41.7%', rec_poj_s:'✓ 14 / 8', rec_poj_okw:'64%', rec_poj_overw:'36%',
+      rec_jom_t:23, rec_jom_h:10, rec_jom_r:'43.5%', rec_jom_s:'✓ 11 / 7', rec_jom_okw:'61%', rec_jom_overw:'39%',
+      rec_nay_t:7, rec_nay_h:7, rec_nay_r:'100.0%', rec_nay_s:'✓ 7 / 0', rec_nay_okw:'100%', rec_nay_overw:'0%',
+      rec_gem_t:5, rec_gem_h:4, rec_gem_r:'80.0%', rec_gem_s:'✓ 5 / 0', rec_gem_okw:'100%', rec_gem_overw:'0%',
+      s_internal:15, s_internal_w:'100%',
+      s_jobthai:13, s_jobthai_w:'87%',
+      s_jobsdb:5, s_jobsdb_w:'33%',
+      s_agency:3, s_agency_w:'20%',
+      s_fb:3, s_fb_w:'20%',
+      s_jobbkk:5, s_jobbkk_w:'33%',
+      s_rehire:5, s_rehire_w:'33%',
+      srcTotal:49, srcChannels:7,
+      grp_internal:15, grp_online:26, grp_agency:3,
+      p_tvp:15, p_ez:7, p_trp:3, p_uc:1,
+      pendSlaPct:'54%', pendSlaArr:'186.6 159.0', pend_sla_within:14, pend_sla_over:12,
+      pend_tier_op:18, pend_tier_op_w:'100%', pend_tier_op_over:12,
+      pend_tier_sp:3, pend_tier_sp_w:'17%', pend_tier_sp_over:0,
+      pend_tier_mg:5, pend_tier_mg_w:'28%', pend_tier_mg_over:0
     }
   };
 
   function renderYear(y) {
-    currentYear = y;
-    const data = YEAR_DATA[y] || YEAR_DATA['2569'];
+    currentYear = '2569';
+    const data = YEAR_DATA['2569'];
     document.querySelectorAll('[data-yk]').forEach(el => {
       const k = el.dataset.yk;
       if (data[k] !== undefined) el.textContent = data[k];
@@ -1635,15 +1166,7 @@ function renderPositions(items){
       if (data[k] !== undefined) el.setAttribute('stroke-dashoffset', data[k]);
     });
   }
-
-  const yearSel = document.getElementById('yearSelect');
-  yearSel.addEventListener('change', () => {
-    const y = yearSel.value;
-    renderYear(y);
-    const d = YEAR_DATA[y] || {};
-    setStatus('idle', 'แสดงข้อมูลปีงบประมาณ ' + y + ' · รวม ' + d.total + ' อัตรา · รับเข้า ' + d.hired + ' คน · ' + d.asOf);
-  });
-  renderYear(yearSel.value);
+  renderYear('2569');
   /* ----- Config (CSV URL) ----- */
   function getCsvUrl(){ return localStorage.getItem('csvUrl') || DEFAULT_CSV_URL; }
   function setCsvUrl(u){ localStorage.setItem('csvUrl', u); }
